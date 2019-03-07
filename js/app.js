@@ -1,3 +1,5 @@
+let w, h;
+
 let increment = .1;
 let scale = 20;
 let cols, rows;
@@ -6,7 +8,9 @@ let particles = new Array(500);
 let flowField = [];
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	w = windowWidth;
+	h = windowHeight;
+	createCanvas(w, h);
 	pixelDensity(1);
 	background(227, 32, 64);
 	colorMode(HSB, 100);
@@ -120,4 +124,13 @@ function showNoiseField(x, y, v){
 	rotate(v.heading());
 	line(0, 0, scale, 0);
 	pop();
+}
+
+function windowResized() {
+	w = windowWidth;
+	h = windowHeight;
+	resizeCanvas(w, h);
+	colorMode(RGB);
+	background(227, 32, 64);
+	colorMode(HSB);
 }
