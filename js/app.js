@@ -12,7 +12,13 @@ function setup() {
 	h = windowHeight;
 	createCanvas(w, h);
 	pixelDensity(1);
-	background(227, 32, 64);
+	
+	noStroke();
+	fill(230, 230, 230);
+	rect(0, 0, width/2, height);
+	fill(227, 32, 64);
+	rect(width/2, 0, width, height);
+	
 	colorMode(HSB, 100);
 	noiseSeed(2018);
 
@@ -103,7 +109,7 @@ function Particle() {
 	}
 
 	this.display = function() {
-		let xScaled = map(this.pos.x, 0, width, 0, 180);
+		let xScaled = map(this.pos.x, width/2, width, 0, 180);
 		let yScaled = map(this.pos.y, 0, height, 0, 180);
 		let variation = random(-20, 20);
 
