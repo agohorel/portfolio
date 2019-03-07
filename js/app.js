@@ -12,14 +12,7 @@ function setup() {
 	h = windowHeight;
 	createCanvas(w, h);
 	pixelDensity(1);
-	
-	noStroke();
-	fill(230, 230, 230);
-	rect(0, 0, width/2, height);
-	fill(227, 32, 64);
-	rect(width/2, 0, width, height);
-	
-	colorMode(HSB, 100);
+	bg(100);
 	noiseSeed(2018);
 
 	cols = floor(width / scale);
@@ -35,6 +28,12 @@ function setup() {
 }
 
 function draw() {
+	if (frameCount % 3 === 0){
+		bg(5);
+	} else {
+		bg(0);
+	}
+
 	let xOffset = 0;
 	for (let x = 0; x < cols; x++) {
 		// reset yOffset each loop thru column
@@ -161,7 +160,6 @@ class Boid {
 		this.position = createVector(random(width/2), random(height));
 		this.radius = random(3, 6);
 		this.hue = random(0, 180);
-		this.saturation = random(0, 100);
 		this.brightness = random(0, 100);
 		this.velocity = p5.Vector.random2D();
 		this.velocity.setMag(random(.01, 5));
@@ -190,7 +188,7 @@ class Boid {
 	}
 
 	lines(boids){
-		stroke(osc(this.hue, 360), osc(this.saturation, 100), osc(this.brightness, 100), osc(this.hue, 100));
+		stroke(osc(this.hue, 360), 0, osc(this.brightness, 100), osc(this.hue, 100));
 		strokeWeight(this.thickness);
 		let perceptionRadius = this.perception;
 		for (let other of boids){
@@ -211,7 +209,6 @@ class Boid {
 		this.radius = osc(this.hue, 2);
 		this.thickness = this.radius*.5;
 		this.hue += .0001;
-		this.saturation += random(.001, 1);
 		this.brightness += random(.001, 1);
 	}
 }
@@ -228,4 +225,14 @@ function windowResized() {
 	colorMode(RGB);
 	background(227, 32, 64);
 	colorMode(HSB);
+}
+
+function bg(opacity){
+	colorMode(RGB);
+	noStroke();
+	fill(230, 230, 230, opacity);
+	rect(0, 0, width/2, height);
+	fill(227, 32, 64, opacity);
+	rect(width/2, 0, width, height);
+	colorMode(HSB, 100);
 }
