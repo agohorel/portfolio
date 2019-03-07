@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "watch_sass": "node-sass sass/main.scss css/style.css -w",
+    "compile_sass": "node-sass sass/main.scss css/style.compiled.css",
+    "concat_css": "concat -o css/style.concat.css css/style.compiled.css",
+    "prefix_css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress_css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build_css": "npm run compile_sass && npm run concat_css && npm run prefix_css && npm run compress_css"
   },
   "author": "",
   "license": "ISC",
