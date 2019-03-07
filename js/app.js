@@ -70,7 +70,7 @@ function draw() {
 }
 
 function Particle() {
-	this.pos = createVector(random(width/2, width), random(height));
+	this.pos = createVector(random(width/2 + 20, width), random(height));
 	this.vel = createVector(0, 0);
 	this.acc = createVector(0, 0);
 	this.maxSpeed = random(1, 6);
@@ -103,7 +103,7 @@ function Particle() {
 	this.edges = function() {
 		if (this.pos.x > width) this.pos.x = width/2;
 		if (this.pos.y > height) this.pos.y = 0;
-		if (this.pos.x < width/2) this.pos.x = width/2;
+		if (this.pos.x < width/2 + 10) this.pos.x = width - this.thickness;
 		if (this.pos.y < 0) this.pos.y = height;
 	}
 
@@ -157,7 +157,7 @@ function runBoids(){
 
 class Boid {
 	constructor(){
-		this.position = createVector(random(width/2), random(height));
+		this.position = createVector(random(0, width/4), random(height));
 		this.radius = random(3, 6);
 		this.hue = random(0, 180);
 		this.brightness = random(0, 100);
@@ -174,15 +174,15 @@ class Boid {
 	}
 
 	edges(){
-		if (this.position.x > width/2 + this.radius){
+		if (this.position.x > width/2 - 10){
 			this.position.x = 0;
-		} else if (this.position.x < -this.radius){
-			this.position.x = width;
+		} else if (this.position.x < 0){
+			this.position.x = width/2 - 10;
 		}
 
-		if (this.position.y > height + this.radius){
+		if (this.position.y > height){
 			this.position.y = 0;
-		} else if (this.position.y < -this.radius){
+		} else if (this.position.y < 0){
 			this.position.y = height;
 		}
 	}
@@ -233,6 +233,6 @@ function bg(opacity){
 	fill(230, 230, 230, opacity);
 	rect(0, 0, width/2, height);
 	fill(227, 32, 64, opacity);
-	rect(width/2, 0, width, height);
+	rect(width/2, 0, width/2, height);
 	colorMode(HSB, 100);
 }
