@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-	if (frameCount % 3 === 0){
+	if (frameCount % 5 === 0){
 		bg(5);
 	} else {
 		bg(0);
@@ -97,13 +97,13 @@ function Particle() {
 		this.vel.limit(this.maxSpeed);
 		this.pos.add(this.vel);
 		this.acc.mult(0);
-		this.thickness = this.vel.x + this.vel.y * .0001;
+		this.thickness = abs(this.vel.x + this.vel.y * .0001);
 	}
 
 	this.edges = function() {
-		if (this.pos.x > width) this.pos.x = width/2;
+		if (this.pos.x > width) this.pos.x = width/2 + this.thickness;
 		if (this.pos.y > height) this.pos.y = 0;
-		if (this.pos.x < width/2 + 10) this.pos.x = width - this.thickness;
+		if (this.pos.x < width/2 + 2) this.pos.x = width - this.thickness;
 		if (this.pos.y < 0) this.pos.y = height;
 	}
 
@@ -111,6 +111,8 @@ function Particle() {
 		let xScaled = map(this.pos.x, width/2, width, 0, 180);
 		let yScaled = map(this.pos.y, 0, height, 0, 180);
 		let variation = random(-20, 20);
+
+		// console.log(this.thickness);
 
 		strokeWeight(this.thickness);
 		stroke((xScaled + yScaled * .2) + variation, 
@@ -120,7 +122,10 @@ function Particle() {
 		
 
 		line(this.pos.x, this.pos.y, this.pos.x, this.pos.y);
-		line(width/2 - this.pos.x, height - this.pos.y, width/2 - this.pos.x, height - this.pos.y);
+		line(width - this.pos.x + width/2 + this.thickness, 
+			 height - this.pos.y,
+			 width - this.pos.x  + width/2 + this.thickness,
+			 height - this.pos.y);
 	}
 }
 
@@ -174,10 +179,10 @@ class Boid {
 	}
 
 	edges(){
-		if (this.position.x > width/2 - 10){
+		if (this.position.x > width/2 - 2){
 			this.position.x = 0;
 		} else if (this.position.x < 0){
-			this.position.x = width/2 - 10;
+			this.position.x = width/2 - 2;
 		}
 
 		if (this.position.y > height){
