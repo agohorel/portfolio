@@ -1,11 +1,9 @@
 @keyframes radial-clip-open {
 	0% {
-		// clip-path: circle(0.0% at 50% 50%);
-		clip-path: inset(0 50% 0 50%);
+		clip-path: circle(0.0% at 50% 50%);
 	}
 
 	100% {
-		// clip-path: circle(100.0% at 50% 50%);
-		clip-path: inset(0 0 0 0);
+		clip-path: circle(100.0% at 50% 50%);
 	}
 }
