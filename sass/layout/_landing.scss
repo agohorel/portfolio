@@ -17,7 +17,59 @@
 			width: 100%;
 			height: 100%;
 		}
+	}
 
+	&__hello {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 50vw;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__headshot {
+		width: calc(5rem + 15vw);
+		height: calc(5rem + 15vw);
+		position: absolute;
+		top: $margin-border;
+		left: $margin-border;
+		border-radius: 50%;
+		box-shadow: 0 0 1rem rgba(black, 0.2);
+	}
+
+	&__textbox {
+		margin-top: calc(#{$headshot-size} * .5);
+		padding: 1rem;
+		height: auto;
+		width: calc(50vw - (#{$margin-border} * 2);
+		background-color: rgba($color-offwhite, .75);
+		box-shadow: 0 0 1rem rgba(black, 0.2);
+	}
+
+	&__h1 {
+		font-size: 3rem;
+		color: $color-secondary;
+		font-weight: 400;
+	}
+
+	&__h2 {
+		color: $color-nearblack;
+		font-weight: 400;
+	
+		&--blue {
+			color: $color-secondary;
+		}
+	}
+
+	&__h3 {
+		color: $color-nearblack;
+		font-weight: 300;
+		font-size: 1rem;
 	}
 
 }

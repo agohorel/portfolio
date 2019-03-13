@@ -1,0 +1,32 @@
+.nav {
+	position: absolute;
+	bottom: $margin-border;
+	right: $margin-border;
+	z-index: 2;
+
+	&__links {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	// refers to li's
+	&__item {
+
+		&:not(:last-of-type){
+			margin-right: 2rem;
+		}
+	}
+
+	// refers to a tags
+	&__link {
+		font-size: 4vw;
+		color: $color-nearblack;
+		transition: .1s ease all;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: line-through;
+			color: $color-offwhite;
+		}
+	}
+}
