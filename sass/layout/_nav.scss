@@ -1,6 +1,6 @@
 .nav {
-	position: absolute;
-	bottom: $margin-border;
+	position: fixed;
+	top: $margin-border;
 	right: $margin-border;
 	z-index: 2;
 
@@ -13,20 +13,21 @@
 	&__item {
 
 		&:not(:last-of-type){
-			margin-right: 2rem;
+			margin-right: 3rem;
 		}
 	}
 
 	// refers to a tags
 	&__link {
 		font-size: 4vw;
-		color: $color-nearblack;
+		color: $color-offwhite;
 		transition: .1s ease all;
 
 		&:hover {
 			cursor: pointer;
 			text-decoration: line-through;
-			color: $color-offwhite;
+			color: $color-nearblack;
 		}
 	}
+
 }
