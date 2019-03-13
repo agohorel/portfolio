@@ -3,6 +3,19 @@
 	width: 100vw;
 	height: 100vh;
 
+	&__radial-clip {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100vw;
+		height: 100vh;
+		background-color: $color-primary-dark;
+		clip-path: inset(0 50% 0 50%);
+		animation: radial-clip-open 1s ease .75s;
+		animation-fill-mode: both;
+	}
+
 	&__p5 {
 		top: 0;
 		left: 0;

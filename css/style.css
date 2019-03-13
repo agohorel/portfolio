@@ -17,6 +17,12 @@ a:visited {
 ul {
   list-style-type: none; }
 
+@keyframes radial-clip-open {
+  0% {
+    clip-path: inset(0 50% 0 50%); }
+  100% {
+    clip-path: inset(0 0 0 0); } }
+
 .nav {
   position: fixed;
   top: 2rem;
@@ -40,6 +46,17 @@ ul {
   position: relative;
   width: 100vw;
   height: 100vh; }
+  .landing__radial-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ba1a35;
+    clip-path: inset(0 50% 0 50%);
+    animation: radial-clip-open 1s ease .75s;
+    animation-fill-mode: both; }
   .landing__p5 {
     top: 0;
     left: 0;
