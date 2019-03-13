@@ -15,7 +15,7 @@ function setup() {
 	cnv.parent("p5-container");
 
 	pixelDensity(1);
-	bg(100);
+	bg(255);
 	noiseSeed(2018);
 
 	cols = floor(width / scale);
@@ -230,9 +230,7 @@ function windowResized() {
 	w = canvasDiv.offsetWidth;
 	h = canvasDiv.offsetHeight;
 	resizeCanvas(w, h);
-	colorMode(RGB);
-	background(227, 32, 64);
-	colorMode(HSB);
+	bg(255);
 }
 
 function bg(opacity){
