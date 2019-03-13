@@ -1,4 +1,4 @@
-let w, h;
+let canvasDiv, w, h, cnv;
 
 let increment = .1;
 let scale = 20;
@@ -8,9 +8,12 @@ let particles = new Array(500);
 let flowField = [];
 
 function setup() {
-	w = windowWidth;
-	h = windowHeight;
-	createCanvas(w, h);
+	canvasDiv = document.getElementById("p5-container");
+	w = canvasDiv.offsetWidth;
+	h = canvasDiv.offsetHeight;
+	cnv = createCanvas(w, h);
+	cnv.parent("p5-container");
+
 	pixelDensity(1);
 	bg(100);
 	noiseSeed(2018);
@@ -224,8 +227,8 @@ function osc(angle, scalar){
 
 
 function windowResized() {
-	w = windowWidth;
-	h = windowHeight;
+	w = canvasDiv.offsetWidth;
+	h = canvasDiv.offsetHeight;
 	resizeCanvas(w, h);
 	colorMode(RGB);
 	background(227, 32, 64);
