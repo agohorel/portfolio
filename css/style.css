@@ -75,36 +75,29 @@ ul {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-  .landing__headshot {
-    width: calc(5rem + 15vw);
-    height: calc(5rem + 15vw);
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    border-radius: 50%;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
+    align-items: center;
+    text-align: center; }
   .landing__textbox {
-    margin-top: calc(20rem * .5);
+    margin-top: 3rem;
     padding: 1rem;
     height: auto;
-    width: calc(50vw - (2rem * 2));
-    background-color: rgba(243, 243, 243, 0.75);
+    width: 50vw;
+    background-color: rgba(26, 26, 26, 0.75);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
   .landing__h1 {
     font-size: 3rem;
     color: #15c6b0;
     font-weight: 400; }
   .landing__h2 {
-    color: #1a1a1a;
+    color: #f3f3f3;
     font-weight: 400; }
     .landing__h2--blue {
       color: #15c6b0; }
   .landing__h3 {
-    color: #1a1a1a;
+    color: #f3f3f3;
     font-weight: 300;
     font-size: 1rem; }
