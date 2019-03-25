@@ -17,6 +17,10 @@ a:visited {
 ul {
   list-style-type: none; }
 
+::selection {
+  background: #1a1a1a;
+  color: #15c6b0; }
+
 @keyframes radial-clip-open {
   0% {
     clip-path: circle(0% at 50% 50%); }

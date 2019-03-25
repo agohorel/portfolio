@@ -19,3 +19,8 @@ a:visited {
 ul {
 	list-style-type: none;
 }
+
+::selection {
+	background: $color-nearblack;
+	color: $color-secondary;
+}
