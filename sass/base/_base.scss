@@ -24,3 +24,13 @@ ul {
 	background: $color-nearblack;
 	color: $color-secondary;
 }
+
+body::-webkit-scrollbar {
+    width: .75rem;
+    background-color: $color-offwhite;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $color-nearblack;
+  outline: 1px solid slategrey;
+}

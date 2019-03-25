@@ -21,6 +21,14 @@ ul {
   background: #1a1a1a;
   color: #15c6b0; }
 
+body::-webkit-scrollbar {
+  width: .75rem;
+  background-color: #f3f3f3; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1a1a1a;
+  outline: 1px solid slategrey; }
+
 @keyframes radial-clip-open {
   0% {
     clip-path: circle(0% at 50% 50%); }
