@@ -44,14 +44,11 @@ ul {
 
 .landing {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh; }
   .landing__radial-clip {
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 100;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #f3f3f3;
     clip-path: inset(0 50% 0 50%);
@@ -75,7 +72,7 @@ ul {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,3 +98,26 @@ ul {
     color: #f3f3f3;
     font-weight: 300;
     font-size: 1rem; }
+
+.about {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .about__header {
+    padding-top: 3rem;
+    font-size: 4rem; }
+  .about__body {
+    padding: 3rem; }
+  .about__paragraph {
+    font-size: 1.6rem;
+    hyphens: auto; }
+  .about__img {
+    float: right;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    margin: 2rem;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%); }
