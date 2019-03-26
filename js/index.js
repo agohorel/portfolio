@@ -4,45 +4,28 @@ const graphicsCategory = document.getElementById("works-graphics");
 const dropdownWeb = document.getElementById("dropdown-web");
 const dropdownDesign = document.getElementById("dropdown-design");
 
-webDevCategory.addEventListener("mouseover", () => {
-    dropdownWeb.classList.remove("dropdown__fadeOut");
-    dropdownWeb.classList.add("dropdown__fadeIn");
-});
+const categories = [webDevCategory, graphicsCategory];
+const dropdowns = [dropdownWeb, dropdownDesign];
 
-webDevCategory.addEventListener("mouseout", () => {
-    dropdownWeb.classList.remove("dropdown__fadeIn");
-    dropdownWeb.classList.add("dropdown__fadeOut");
-});
+for (let i = 0; i < categories.length; i++){
+    categories[i].addEventListener("mouseover", () => {
+        toggleVisibility(dropdowns[i]);
+    });
 
-dropdownWeb.addEventListener("mouseover", () => {
-    dropdownWeb.classList.remove("dropdown__fadeOut");
-    dropdownWeb.classList.add("dropdown__fadeIn");
-});
+    categories[i].addEventListener("mouseout", () => {
+        toggleVisibility(dropdowns[i]);
+    });
 
-dropdownWeb.addEventListener("mouseout", () => {
-    dropdownWeb.classList.remove("dropdown__fadeIn");
-    dropdownWeb.classList.add("dropdown__fadeOut");
-});
+    dropdowns[i].addEventListener("mouseover", () => {
+        toggleVisibility(dropdowns[i]);
+    });
 
-// design category 
+    dropdowns[i].addEventListener("mouseout", () => {
+        toggleVisibility(dropdowns[i]);
+    });
+}
 
-graphicsCategory.addEventListener("mouseover", () => {
-    dropdownDesign.classList.remove("dropdown__fadeOut");
-    dropdownDesign.classList.add("dropdown__fadeIn");
-});
-
-graphicsCategory.addEventListener("mouseout", () => {
-    dropdownDesign.classList.remove("dropdown__fadeIn");
-    dropdownDesign.classList.add("dropdown__fadeOut");
-});
-
-dropdownDesign.addEventListener("mouseover", () => {
-    dropdownDesign.classList.remove("dropdown__fadeOut");
-    dropdownDesign.classList.add("dropdown__fadeIn");
-});
-
-dropdownDesign.addEventListener("mouseout", () => {
-    dropdownDesign.classList.remove("dropdown__fadeIn");
-    dropdownDesign.classList.add("dropdown__fadeOut");
-});
-
+function toggleVisibility(element){
+    element.classList.toggle("dropdown__fadeIn");
+    element.classList.toggle("dropdown__fadeOut");
+}
