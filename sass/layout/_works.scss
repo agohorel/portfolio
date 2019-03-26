@@ -1,0 +1,43 @@
+.works {
+    height: 100vh;
+    width: 100%;
+    background-color: $color-offwhite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        padding-top: 3rem;
+        font-size: 4rem;
+    }
+
+    &__container {
+        
+    }
+
+    &__categories {
+        display: flex;
+    }
+
+    &__category {
+        transition: .2s linear all;
+
+        &:hover {
+            cursor: pointer;
+            color: lighten($color-nearblack, 25%);
+        }
+
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+    }
+
+    &__card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 3rem;
+    }
+}

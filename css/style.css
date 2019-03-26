@@ -133,3 +133,52 @@ body::-webkit-scrollbar-thumb {
     margin: 2rem;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%); }
+
+.works {
+  height: 100vh;
+  width: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .works__header {
+    padding-top: 3rem;
+    font-size: 4rem; }
+  .works__categories {
+    display: flex; }
+  .works__category {
+    transition: .2s linear all; }
+    .works__category:hover {
+      cursor: pointer;
+      color: #5a5a5a; }
+    .works__category:not(:last-child) {
+      margin-right: 3rem; }
+  .works__card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem; }
+
+.card {
+  background-color: #b3b3b3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 40%;
+  margin: 3rem; }
+  .card__title {
+    margin-bottom: 1rem;
+    font-size: 2rem; }
+  .card__img {
+    max-width: 67%;
+    margin-bottom: 1rem; }
+  .card__body {
+    font-size: 1rem; }
+    .card__body:not(:last-of-type) {
+      margin-bottom: 1rem; }
+  .card__list {
+    font-size: .8rem;
+    list-style: square; }
