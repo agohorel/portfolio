@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
   .dropdown__item {
     text-align: center;
     font-size: 1rem;
-    padding: 1rem;
+    padding: .7rem;
     transition: .2s linear all; }
     .dropdown__item:hover {
       cursor: pointer;
