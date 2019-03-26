@@ -36,7 +36,7 @@ body::-webkit-scrollbar-thumb {
     clip-path: circle(100% at 50% 50%); } }
 
 .nav {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 2rem;
   z-index: 2; }
@@ -182,3 +182,29 @@ body::-webkit-scrollbar-thumb {
   .card__list {
     font-size: .8rem;
     list-style: square; }
+
+.dropdown {
+  visibility: hidden; }
+  .dropdown__container {
+    background-color: #dadada;
+    max-width: 50%; }
+  .dropdown__item {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: .2s linear all; }
+    .dropdown__item:hover {
+      cursor: pointer;
+      background-color: #b3b3b3; }
+  .dropdown__link, .dropdown__link:visited {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: .2s linear all; }
+  .dropdown__fadeOut {
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear all; }
+  .dropdown__fadeIn {
+    opacity: 1;
+    visibility: visible;
+    transition: .2s linear all; }

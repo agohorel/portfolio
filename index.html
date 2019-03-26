@@ -67,9 +67,21 @@
 		<h1 class="works__header">works</h1>
 		<div class="works__container">
 			<div class="works__categories">
-				<h3 class="works__category">web development</h3>
-				<h3 class="works__category">graphic design</h3>
+				<h3 id="works-webdev" class="works__category">web development</h3>
+				<h3 id="works-graphics" class="works__category">graphic design</h3>
 			</div>
+			
+			<div class="dropdown">
+				<div id="dropdown-web" class="dropdown__container">
+					<div class="dropdown__item">
+						<p id="dropdown-websites" class="dropdown__link">websites</p>
+					</div>
+					<div class="dropdown__item">
+						<p id="dropdown-projects" class="dropdown__link">projects</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="works__card-container">
@@ -91,18 +103,18 @@
 			</div>
 			
 			<div class="card">
-				<h3 class="card__title">aleph</h3>
+				<h3 class="card__title">droenbot</h3>
 				<img src="https://github.com/agohorel/aleph/raw/master/docs/img/ui.png" alt="aleph ui image" class="card__img">
 				<p class="card__body">
-					Aleph is a desktop application and programming framework for designing and performing live, audio-reactive
-					visuals.
+					Droenbot is a node.js based Discord bot that can assist with server moderation, fetch data from various APIs, and adds
+					some additional functionality to Discord like the ability to store and edit user profiles and set up reminders. Oh, and
+					it's got gifs.
 				</p>
 				<p class="card__body"> <strong>Tools Used:</strong> </p>
 				<ul class="card__list">
 					<li class="card__list-item">Node.js</li>
-					<li class="card__list-item">Electron</li>
-					<li class="card__list-item">p5.js</li>
-					<li class="card__list-item">midi.js</li>
+					<li class="card__list-item">Discord API</li>
+					<li class="card__list-item">Amazon AWS EC2</li>
 				</ul>
 			</div>
 
@@ -110,6 +122,7 @@
 
 	</section>
 
+	<script src="./js/index.js"></script>
 	<script src="./js/app.js"></script>
 </body>
 </html>
