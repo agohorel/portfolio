@@ -155,8 +155,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 3rem; }
+    flex-wrap: wrap; }
 
 .card {
   background-color: #b3b3b3;
@@ -166,7 +165,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 1rem 2rem;
   max-width: 40%;
-  margin: 3rem; }
+  margin: 0 3rem 0 3rem; }
   .card__title {
     margin-bottom: 1rem;
     font-size: 2rem; }
