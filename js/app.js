@@ -1,10 +1,11 @@
 let canvasDiv, w, h, cnv;
 
+let numParticles = 500;
 let increment = .1;
 let scale = 20;
 let cols, rows;
 let zOffset = 0;
-let particles = new Array(500);
+let particles = new Array(numParticles);
 let flowField = [];
 
 function setup() {
@@ -26,13 +27,16 @@ function setup() {
 
 	// instantiate particle class
 	for (let i = 0; i < particles.length; i++) {
-		particles[i] = new Particle();
+		let x = random(width);
+		let y = random(height);
+		particles[i] = new Particle(x, y, i);
 	}
 }
 
 function draw() {
 	if (frameCount % 5 === 0){
 		bg(20);
+		if (particles.length > numParticles) console.log("# of particles exceeded limit!!!");
 	} else {
 		bg(0);
 	}
@@ -42,7 +46,7 @@ function draw() {
 		// reset yOffset each loop thru column
 		let yOffset = 0;
 		for (let y = 0; y < rows; y++) {
-			// the " * 4" is to add more chaos to the angles
+			// the " * 2" is to add more chaos to the angles
 			let angle = noise(xOffset, yOffset, zOffset) * TWO_PI * 2;
 			// get the index of current cell
 			let index = x + y * cols;
@@ -70,8 +74,9 @@ function draw() {
 
 }
 
-function Particle() {
-	this.pos = createVector(random(width), random(height));
+function Particle(xSpawnLoc, ySpawnLoc, index) {
+	this.index = index;
+	this.pos = createVector(xSpawnLoc, ySpawnLoc);
 	this.vel = createVector(0, 0);
 	this.acc = createVector(0, 0);
 	this.maxSpeed = random(1, 6);
@@ -102,10 +107,17 @@ function Particle() {
 	}
 
 	this.edges = function() {
-		if (this.pos.x > width) this.pos.x = 0;
-		if (this.pos.y > height) this.pos.y = 0;
-		if (this.pos.x < 0) this.pos.x = width;
-		if (this.pos.y < 0) this.pos.y = height;
+		if (this.pos.x > width 
+			|| this.pos.y > height 
+			|| this.pos.x < 0 
+			|| this.pos.y < 0) {
+				this.edgeReaction();
+			}
+	}
+
+	this.edgeReaction = function (){
+		particles.splice(this.index, 1);
+		particles.push(new Particle(random(width), random(height), numParticles-1));
 	}
 
 	this.display = function() {
