@@ -13,7 +13,7 @@
     }
 
     &__container {
-        
+
     }
 
     &__categories {
@@ -26,10 +26,6 @@
         &:hover {
             cursor: pointer;
             color: lighten($color-nearblack, 25%);
-        }
-
-        &:not(:last-child){
-            margin-right: 3rem;
         }
     }
 

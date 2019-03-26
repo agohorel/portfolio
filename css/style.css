@@ -151,8 +151,6 @@ body::-webkit-scrollbar-thumb {
     .works__category:hover {
       cursor: pointer;
       color: #5a5a5a; }
-    .works__category:not(:last-child) {
-      margin-right: 3rem; }
   .works__card-container {
     display: flex;
     justify-content: center;
@@ -184,10 +182,15 @@ body::-webkit-scrollbar-thumb {
     list-style: square; }
 
 .dropdown {
-  visibility: hidden; }
+  position: relative;
+  display: inline-block;
+  margin: 1rem; }
+  .dropdown__flex-container {
+    display: flex; }
   .dropdown__container {
+    visibility: hidden;
     background-color: #dadada;
-    max-width: 50%; }
+    width: 100%; }
   .dropdown__item {
     text-align: center;
     font-size: 1rem;
