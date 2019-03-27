@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
     display: flex; }
   .works__category {
     transition: .2s linear all;
-    font-size: 2rem; }
+    font-size: 1.6rem; }
     .works__category:hover {
       cursor: pointer;
       color: #5a5a5a; }
@@ -202,6 +202,8 @@ body::-webkit-scrollbar-thumb {
     font-size: 2rem; }
   .card__img {
     max-width: 67%;
+    max-height: 25rem;
+    object-fit: cover;
     margin-bottom: 1rem; }
   .card__body {
     font-size: 1.4rem; }

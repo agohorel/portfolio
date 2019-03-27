@@ -17,6 +17,8 @@
 
     &__img {
         max-width: 67%;
+        max-height: 25rem;
+        object-fit: cover;
         margin-bottom: 1rem;
     }
 
