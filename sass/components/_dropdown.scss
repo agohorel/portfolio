@@ -3,9 +3,12 @@
     display: inline-block;
     margin: 1rem;
 
-
     &__flex-container {
         display: flex;
+    }
+
+    &__header {
+
     }
 
     &__container {
@@ -43,5 +46,13 @@
         opacity: 1;
         visibility: visible;
         transition: .2s linear all;
+    }
+
+    &__slide-in {
+        animation: slide-in-dropdown .2s ease-in-out forwards;
+    }
+
+    &__slide-out {
+        animation: slide-out-dropdown .5s ease-in-out forwards;
     }
 }

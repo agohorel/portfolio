@@ -38,6 +38,18 @@ body::-webkit-scrollbar-thumb {
   100% {
     clip-path: circle(100% at 50% 50%); } }
 
+@keyframes slide-in-dropdown {
+  0% {
+    transform: translateY(5rem) rotateY(90deg); }
+  100% {
+    transform: translateY(0) rotateY(0deg); } }
+
+@keyframes slide-out-dropdown {
+  0% {
+    transform: scale(1) translateY(0rem) rotateY(0deg); }
+  100% {
+    transform: scale(0) translateY(5rem) rotateY(90deg); } }
+
 .nav {
   position: absolute;
   top: 2rem;
@@ -213,3 +225,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
     visibility: visible;
     transition: .2s linear all; }
+  .dropdown__slide-in {
+    animation: slide-in-dropdown .2s ease-in-out forwards; }
+  .dropdown__slide-out {
+    animation: slide-out-dropdown .5s ease-in-out forwards; }
