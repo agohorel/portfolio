@@ -9,7 +9,8 @@
     max-width: 34%;
     margin: 0 5rem 0 3rem;
     text-align: center;
-    @include shadow(0, .2rem, .5rem, 0.2);
+    border-radius: $border-radius;
+    @include shadow(0, .2rem, .25rem, 0.2);
 
     &__title {
         margin-bottom: 1rem;
@@ -21,6 +22,7 @@
         max-height: 25rem;
         object-fit: cover;
         margin-bottom: 1rem;
+        border-radius: $border-radius;
     }
 
     &__body {

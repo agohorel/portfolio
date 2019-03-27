@@ -124,6 +124,7 @@ body::-webkit-scrollbar-thumb {
     height: auto;
     width: 50vw;
     background-color: rgba(26, 26, 26, 0.75);
+    border-radius: 3px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
   .landing__h1 {
     font-size: 5rem;
@@ -197,7 +198,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 34%;
   margin: 0 5rem 0 3rem;
   text-align: center;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); }
+  border-radius: 3px;
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2); }
   .card__title {
     margin-bottom: 1rem;
     font-size: 2rem; }
@@ -205,7 +207,8 @@ body::-webkit-scrollbar-thumb {
     max-width: 67%;
     max-height: 25rem;
     object-fit: cover;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    border-radius: 3px; }
   .card__body {
     font-size: 1.4rem; }
     .card__body:not(:last-of-type) {
@@ -225,7 +228,7 @@ body::-webkit-scrollbar-thumb {
     visibility: hidden;
     background-color: #dadada;
     width: 100%;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .dropdown__item {
     text-align: center;
     font-size: 1.2rem;
