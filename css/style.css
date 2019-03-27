@@ -189,10 +189,9 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap; }
 
 .card {
-  background-image: linear-gradient(to bottom right, #dadada, #b3b3b3);
+  background-color: #dadada;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   max-width: 34%;
@@ -205,8 +204,8 @@ body::-webkit-scrollbar-thumb {
     font-size: 2rem; }
   .card__img {
     max-width: 67%;
-    max-height: 25rem;
-    object-fit: cover;
+    max-height: 23rem;
+    object-fit: scale-down;
     margin-bottom: 1rem;
     border-radius: 3px; }
   .card__body {
