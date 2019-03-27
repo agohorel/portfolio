@@ -1,0 +1,13 @@
+@mixin responsive($breakpoint) {
+	@if ($breakpoint < $large-desktop) {
+	    @media only screen and (max-width: $breakpoint) {
+	        @content
+	   }
+	}
+
+	@if ($breakpoint >= $large-desktop) {
+	    @media only screen and (min-width: $breakpoint) {
+	        @content
+	   }
+	}
+}

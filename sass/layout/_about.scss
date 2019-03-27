@@ -7,8 +7,8 @@
     align-items: center;
 
     &__header {
-        padding-top: 3rem;
-        font-size: 4rem;
+        padding-top: $margin-top;
+        font-size: $font-h1;
     }
 
     &__body {
@@ -16,7 +16,7 @@
     }
 
     &__paragraph {
-        font-size: 1.6rem;
+        font-size: $font-paragraph;
         hyphens: auto;
     }
 

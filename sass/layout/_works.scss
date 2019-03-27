@@ -8,8 +8,8 @@
     align-items: center;
 
     &__header {
-        padding-top: 3rem;
-        font-size: 4rem;
+        padding-top: $margin-top;
+        font-size: $font-h1;
     }
 
     &__container {
@@ -22,6 +22,7 @@
 
     &__category {
         transition: .2s linear all;
+        font-size: $font-h3;
 
         &:hover {
             cursor: pointer;

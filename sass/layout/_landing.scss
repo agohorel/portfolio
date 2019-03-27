@@ -54,13 +54,14 @@
 	}
 
 	&__h1 {
-		font-size: 3rem;
+		font-size: 5rem;
 		color: $color-secondary;
 		font-weight: 400;
 	}
 
 	&__h2 {
 		color: $color-offwhite;
+		font-size: 2rem;
 		font-weight: 400;
 	
 		&--blue {
@@ -71,7 +72,7 @@
 	&__h3 {
 		color: $color-offwhite;
 		font-weight: 300;
-		font-size: 1rem;
+		font-size: 1.6rem;
 	}
 
 }

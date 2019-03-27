@@ -7,7 +7,20 @@
   box-sizing: inherit; }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
@@ -113,18 +126,19 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(26, 26, 26, 0.75);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
   .landing__h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     color: #15c6b0;
     font-weight: 400; }
   .landing__h2 {
     color: #f3f3f3;
+    font-size: 2rem;
     font-weight: 400; }
     .landing__h2--blue {
       color: #15c6b0; }
   .landing__h3 {
     color: #f3f3f3;
     font-weight: 300;
-    font-size: 1rem; }
+    font-size: 1.6rem; }
 
 .about {
   min-width: 100%;
@@ -134,7 +148,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center; }
   .about__header {
     padding-top: 3rem;
-    font-size: 4rem; }
+    font-size: 5rem; }
   .about__body {
     padding: 3rem; }
   .about__paragraph {
@@ -158,11 +172,12 @@ body::-webkit-scrollbar-thumb {
   align-items: center; }
   .works__header {
     padding-top: 3rem;
-    font-size: 4rem; }
+    font-size: 5rem; }
   .works__categories {
     display: flex; }
   .works__category {
-    transition: .2s linear all; }
+    transition: .2s linear all;
+    font-size: 2rem; }
     .works__category:hover {
       cursor: pointer;
       color: #5a5a5a; }
@@ -173,14 +188,15 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap; }
 
 .card {
-  background-color: #b3b3b3;
+  background-image: linear-gradient(to bottom right, #dadada, #b3b3b3);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 40%;
-  margin: 0 3rem 0 3rem; }
+  max-width: 34%;
+  margin: 0 5rem 0 3rem;
+  text-align: center; }
   .card__title {
     margin-bottom: 1rem;
     font-size: 2rem; }
@@ -188,12 +204,13 @@ body::-webkit-scrollbar-thumb {
     max-width: 67%;
     margin-bottom: 1rem; }
   .card__body {
-    font-size: 1rem; }
+    font-size: 1.4rem; }
     .card__body:not(:last-of-type) {
       margin-bottom: 1rem; }
   .card__list {
-    font-size: .8rem;
-    list-style: square; }
+    font-size: 1.2rem;
+    list-style: square;
+    text-align: left; }
 
 .dropdown {
   position: relative;
@@ -207,7 +224,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%; }
   .dropdown__item {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: .7rem;
     transition: .2s linear all; }
     .dropdown__item:hover {
