@@ -15,6 +15,7 @@
         visibility: hidden;
         background-color: darken($color-offwhite, 10%);
         width: 100%;
+        @include shadow(0, .2rem, .5rem, 0.2);
     }
 
     &__item {

@@ -9,6 +9,7 @@
     max-width: 34%;
     margin: 0 5rem 0 3rem;
     text-align: center;
+    @include shadow(0, .2rem, .5rem, 0.2);
 
     &__title {
         margin-bottom: 1rem;

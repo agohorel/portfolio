@@ -11,3 +11,7 @@
 	   }
 	}
 }
+
+@mixin shadow($h-offset, $v-offset, $blur, $opacity) {
+    box-shadow: $h-offset $v-offset $blur rgba(0, 0, 0, $opacity);
+}

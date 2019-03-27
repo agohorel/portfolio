@@ -196,7 +196,8 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem 2rem;
   max-width: 34%;
   margin: 0 5rem 0 3rem;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); }
   .card__title {
     margin-bottom: 1rem;
     font-size: 2rem; }
@@ -223,7 +224,8 @@ body::-webkit-scrollbar-thumb {
   .dropdown__container {
     visibility: hidden;
     background-color: #dadada;
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2); }
   .dropdown__item {
     text-align: center;
     font-size: 1.2rem;
