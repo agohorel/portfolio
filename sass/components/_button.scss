@@ -1,24 +1,33 @@
 .button {
     display: inline-block;
-    padding: 1rem 2rem;
-    background-color: $color-secondary;
-    border-radius: $border-radius;
-    transition: .1s linear all;
-
-    &:hover {
-        cursor: pointer;
-        background-color: darken($color-secondary, 5%);
-        transform: translateY(-2px);
-        @include shadow(0, .2rem, .25rem, 0.1);
-    }
-
-    &:active {
-        transform: translateY(1px);
-        @include shadow(0, .2rem, .125rem, 0.1);
-    }
 
     &:not(:last-child){
         margin-right: 1rem;
+    }
+
+    &:hover div {
+        color: darken($color-offwhite, 10%);
+    }
+
+    &__body {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: $color-secondary;
+        border-radius: $border-radius;
+        transition: .1s linear all;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color-secondary, 5%);
+            transform: translateY(-2px);
+            @include shadow(0, .2rem, .25rem, 0.1);
+        }
+
+        &:active {
+            transform: translateY(1px);
+            @include shadow(0, .2rem, .125rem, 0.1);
+        }
     }
     
     &__link,
