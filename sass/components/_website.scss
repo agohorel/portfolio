@@ -3,6 +3,7 @@
     background-color: darken($color-offwhite, 5%);
     padding: 3rem;
     border-radius: $border-radius;
+    margin-bottom: 5rem;
     @include shadow(0, .2rem, .25rem, 0.1);
     
     &__title{
