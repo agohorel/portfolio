@@ -1,0 +1,28 @@
+.website {
+    text-align: center; 
+    background-color: darken($color-offwhite, 5%);
+    padding: 3rem;
+    border-radius: $border-radius;
+    @include shadow(0, .2rem, .25rem, 0.1);
+    
+    &__title{
+        font-size: $font-h2;
+    }
+
+    &__gallery {
+        display: flex;
+    }
+
+    &__img {
+        height: 100%;
+        width: 25vw;
+    }
+
+    &__body {
+        font-size: $font-paragraph;
+    }
+
+    &__dev {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,23 @@
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: $color-secondary;
+    border-radius: $border-radius;
+    transition: .2s linear all;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color-secondary, 5%);
+    }
+
+    &:not(:last-child){
+        margin-right: 1rem;
+    }
+    
+    &__link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-nearblack;
+    }
+
+}
