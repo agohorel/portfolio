@@ -53,15 +53,15 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes slide-in-dropdown {
   0% {
-    transform: translateY(5rem) rotateY(90deg); }
+    transform: translateY(5rem); }
   100% {
-    transform: translateY(0) rotateY(0deg); } }
+    transform: translateY(0); } }
 
 @keyframes slide-out-dropdown {
   0% {
-    transform: scale(1) translateY(0rem) rotateY(0deg); }
+    transform: scale(1) translateY(0rem); }
   100% {
-    transform: scale(0) translateY(5rem) rotateY(90deg); } }
+    transform: scale(0) translateY(5rem); } }
 
 .nav {
   position: absolute;
@@ -259,6 +259,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #e6e6e6;
   padding: 3rem;
   border-radius: 3px;
+  margin-bottom: 5rem;
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .website__title {
     font-size: 3.5rem; }
@@ -279,7 +280,6 @@ body::-webkit-scrollbar-thumb {
   .button:hover div {
     color: #dadada; }
   .button__body {
-    display: inline-block;
     padding: 1rem 2rem;
     background-color: #15c6b0;
     border-radius: 3px;
