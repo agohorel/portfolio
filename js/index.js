@@ -1,6 +1,7 @@
+// portfolio categories
 const webDevCategory = document.getElementById("works-webdev");
 const graphicsCategory = document.getElementById("works-graphics");
-
+// portfolio dropdown containers
 const dropdownWeb = document.getElementById("dropdown-web");
 const dropdownDesign = document.getElementById("dropdown-design");
 
@@ -37,4 +38,27 @@ function toggleVisibility(element){
 function animateDropdowns(element) {
     element.classList.toggle("dropdown__slide-in");
     element.classList.toggle("dropdown__slide-out");
+}
+
+// web dev dropdown items
+const websitesBtn = document.getElementById("dropdown-websites");
+const projectsBtn = document.getElementById("dropdown-projects");
+// graphic design dropdown items
+const albumArtBtn = document.getElementById("dropdown-album-art");
+const logosBtn = document.getElementById("dropdown-logos");
+const flyersBtn = document.getElementById("dropdown-flyers");
+// dropdown items
+const dropdownLinks = [websitesBtn, projectsBtn, albumArtBtn, logosBtn, flyersBtn];
+
+// portfolio containers
+const websitesContainer = document.querySelector(".works__website-container");
+const projectsContainer = document.querySelector(".works__card-container");
+
+
+let currentSelection = "websites";
+
+for (let i = 0; i < dropdownLinks.length; i++){
+    dropdownLinks[i].addEventListener("click", () => {
+        currentSelection = dropdownLinks[i].innerText;
+    });
 }

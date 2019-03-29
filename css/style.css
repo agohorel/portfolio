@@ -196,7 +196,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem 2rem;
   min-width: 50rem;
   max-width: 34%;
-  margin: 0 5rem 0 3rem;
+  margin: 0 5rem 2rem 3rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2); }
@@ -228,7 +228,6 @@ body::-webkit-scrollbar-thumb {
     visibility: hidden;
     background-color: #dadada;
     width: 100%;
-    transform: translateY(200px);
     box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .dropdown__item {
     text-align: center;
@@ -237,6 +236,8 @@ body::-webkit-scrollbar-thumb {
     transition: .2s linear all; }
     .dropdown__item:hover {
       cursor: pointer;
+      background-color: #b3b3b3; }
+    .dropdown__item:focus, .dropdown__item:active {
       background-color: #b3b3b3; }
   .dropdown__link, .dropdown__link:visited {
     color: #1a1a1a;
