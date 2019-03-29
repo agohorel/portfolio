@@ -257,20 +257,31 @@ body::-webkit-scrollbar-thumb {
 .website {
   text-align: center;
   background-color: #e6e6e6;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 3px;
   margin-bottom: 5rem;
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .website__title {
     font-size: 3.5rem; }
   .website__gallery {
-    display: flex; }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; }
   .website__img {
+    width: 20vw;
     height: 100%;
-    width: 25vw; }
+    transition: .2s ease-in-out all; }
+    .website__img:hover {
+      transform: scale(1.5); }
   .website__body {
+    position: relative;
+    z-index: 2;
     font-size: 1.6rem; }
   .website__dev {
+    position: relative;
+    z-index: 2;
     margin-bottom: 2rem; }
 
 .button {
