@@ -15,6 +15,7 @@
         visibility: hidden;
         background-color: darken($color-offwhite, 10%);
         width: 100%;
+        transform: translateY(  200px);
         @include shadow(0, .2rem, .25rem, 0.1);
     }
 

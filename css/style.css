@@ -228,6 +228,7 @@ body::-webkit-scrollbar-thumb {
     visibility: hidden;
     background-color: #dadada;
     width: 100%;
+    transform: translateY(200px);
     box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .dropdown__item {
     text-align: center;
