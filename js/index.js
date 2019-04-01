@@ -40,25 +40,46 @@ function animateDropdowns(element) {
     element.classList.toggle("dropdown__slide-out");
 }
 
-// web dev dropdown items
-const websitesBtn = document.getElementById("dropdown-websites");
-const projectsBtn = document.getElementById("dropdown-projects");
-// graphic design dropdown items
-const albumArtBtn = document.getElementById("dropdown-album-art");
-const logosBtn = document.getElementById("dropdown-logos");
-const flyersBtn = document.getElementById("dropdown-flyers");
-// dropdown items
-const dropdownLinks = [websitesBtn, projectsBtn, albumArtBtn, logosBtn, flyersBtn];
 
+const dropdownLinks = document.querySelectorAll(".dropdown__link");
 // portfolio containers
-const websitesContainer = document.querySelector(".works__website-container");
-const projectsContainer = document.querySelector(".works__card-container");
-
+const websitesContainer = document.querySelector(".works__websites-container");
+const projectsContainer = document.querySelector(".works__projects-container");
+const portfolioContainers = [websitesContainer, projectsContainer];
 
 let currentSelection = "websites";
 
 for (let i = 0; i < dropdownLinks.length; i++){
     dropdownLinks[i].addEventListener("click", () => {
         currentSelection = dropdownLinks[i].innerText;
+
+        switch (currentSelection){
+            case "websites":
+                setPortfolioView(portfolioContainers, currentSelection);
+            break;
+            case "projects":
+                setPortfolioView(portfolioContainers, currentSelection);
+            break;
+        }
+    });
+}
+
+function setPortfolioView(elem, target){
+    let matching = elem.filter((container) => {
+        for (let i = 0; i < container.classList.length; i++) {
+            return container.classList[i].indexOf(target) > -1;
+        }
+    });
+
+    matching[0].style.display = "block";
+
+    let nonMatching = elem.filter((container) => {
+        for (let i = 0; i < container.classList.length; i++) {
+            return container.classList[i].indexOf(target) < 0;
+        }
+    });
+
+    nonMatching.forEach((nonMatchingElement) => {
+        nonMatchingElement.style.display = "none";
     });
 }

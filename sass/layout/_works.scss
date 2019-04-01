@@ -26,14 +26,18 @@
         }
     }
 
-    &__card-container {
+    &__projects-container {
+        display: none;
+    }
+
+    &__projects-flex-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    &__website-container {
+    &__websites-container {
 
     }
 }
