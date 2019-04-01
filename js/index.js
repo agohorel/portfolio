@@ -52,15 +52,7 @@ let currentSelection = "websites";
 for (let i = 0; i < dropdownLinks.length; i++){
     dropdownLinks[i].addEventListener("click", () => {
         currentSelection = dropdownLinks[i].innerText;
-
-        switch (currentSelection){
-            case "websites":
-                setPortfolioView(portfolioContainers, currentSelection);
-            break;
-            case "projects":
-                setPortfolioView(portfolioContainers, currentSelection);
-            break;
-        }
+        setPortfolioView(portfolioContainers, currentSelection);
     });
 }
 
