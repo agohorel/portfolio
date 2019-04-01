@@ -218,7 +218,8 @@ body::-webkit-scrollbar-thumb {
   .card__list {
     font-size: 1.2rem;
     list-style: square;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 1rem; }
 
 .dropdown {
   position: relative;
