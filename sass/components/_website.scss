@@ -4,6 +4,7 @@
     padding: 2rem;
     border-radius: $border-radius;
     margin-bottom: 5rem;
+    max-width: 67vw;
     @include shadow(0, .2rem, .25rem, 0.1);
     
     &__title{
@@ -11,51 +12,29 @@
     }
 
     &__gallery {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
+        padding: 3rem;
+
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         align-items: center;
-        z-index: 0;
     }
 
     &__img {
-        width: 30vw;
-        height: 100%;
         transition: .2s ease-in-out all;
-        margin: -2vw;
+        height: 12vw;
 
-        &--phone {
-            transform: scale(.5);
-            
-            &:hover {
-                transform: scale(.75);
-            }
-        }
-
-        &--desktop {
-            &:hover {
-                transform: scale(1.5);
-            }
-        }
-
-        &--tablet {
-            transform: scale(.85);
-            
-            &:hover {
-                transform: scale(1.275);
-            }
+        &:hover {
+            transform: scale(1.25);
         }
     }
 
     &__body {
-        position: relative;
-        z-index: 2;
         font-size: $font-paragraph;
     }
 
     &__dev {
-        position: relative;
-        z-index: 2;
         margin-bottom: 2rem;
     }
 }
