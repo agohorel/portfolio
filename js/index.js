@@ -45,7 +45,8 @@ const dropdownLinks = document.querySelectorAll(".dropdown__link");
 // portfolio containers
 const websitesContainer = document.querySelector(".works__websites-container");
 const projectsContainer = document.querySelector(".works__projects-container");
-const portfolioContainers = [websitesContainer, projectsContainer];
+const albumsContainer = document.querySelector(".works__album-container");
+const portfolioContainers = [websitesContainer, projectsContainer, albumsContainer];
 
 let currentSelection = "websites";
 
@@ -58,20 +59,17 @@ for (let i = 0; i < dropdownLinks.length; i++){
 
 function setPortfolioView(elem, target){
     let matching = elem.filter((container) => {
-        for (let i = 0; i < container.classList.length; i++) {
-            return container.classList[i].indexOf(target) > -1;
-        }
+        return container.getAttribute("data-container").indexOf(target) > -1;
     });
 
     matching[0].style.display = "block";
 
     let nonMatching = elem.filter((container) => {
-        for (let i = 0; i < container.classList.length; i++) {
-            return container.classList[i].indexOf(target) < 0;
-        }
+        return container.getAttribute("data-container").indexOf(target) < 0;
     });
 
     nonMatching.forEach((nonMatchingElement) => {
         nonMatchingElement.style.display = "none";
     });
+
 }
