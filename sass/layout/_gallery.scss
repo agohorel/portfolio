@@ -1,16 +1,16 @@
 .gallery {
     background-color: $color-offwhite;
     display: flex;
-    justify-content: center;
+	justify-content: center;
     
     &__grid {
         display: grid;
-        max-width: 67vw;
+        max-width: calc(100vh - 3rem);
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 1.5rem;
-        padding: 1.5rem;
-        transition: .2s ease-out opacity;
+		grid-gap: 1.25rem;
+		padding-bottom: 1.5rem;
+		transition: .2s ease-out opacity;
 
         &:hover .gallery__item:not(:hover){
             opacity: .5;
@@ -18,7 +18,7 @@
     }
 
     &__item {
-        position: relative;
+		position: relative;
         transition: .2s ease-out all;
 
         &:hover {
