@@ -13,18 +13,37 @@
     &__gallery {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         z-index: 0;
     }
 
     &__img {
-        width: 20vw;
+        width: 30vw;
         height: 100%;
         transition: .2s ease-in-out all;
+        margin: -2vw;
 
-        &:hover {
-            transform: scale(1.5);
+        &--phone {
+            transform: scale(.5);
+            
+            &:hover {
+                transform: scale(.75);
+            }
+        }
+
+        &--desktop {
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+
+        &--tablet {
+            transform: scale(.85);
+            
+            &:hover {
+                transform: scale(1.275);
+            }
         }
     }
 

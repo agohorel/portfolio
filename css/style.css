@@ -323,15 +323,24 @@ body::-webkit-scrollbar-thumb {
   .website__gallery {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 0; }
   .website__img {
-    width: 20vw;
+    width: 30vw;
     height: 100%;
-    transition: .2s ease-in-out all; }
-    .website__img:hover {
+    transition: .2s ease-in-out all;
+    margin: -2vw; }
+    .website__img--phone {
+      transform: scale(0.5); }
+      .website__img--phone:hover {
+        transform: scale(0.75); }
+    .website__img--desktop:hover {
       transform: scale(1.5); }
+    .website__img--tablet {
+      transform: scale(0.85); }
+      .website__img--tablet:hover {
+        transform: scale(1.275); }
   .website__body {
     position: relative;
     z-index: 2;
