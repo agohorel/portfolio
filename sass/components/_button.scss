@@ -25,6 +25,7 @@
 
         &:active {
             transform: translateY(1px);
+            background-color: lighten($color-secondary, 15%);
             @include shadow(0, .2rem, .125rem, 0.1);
         }
     }

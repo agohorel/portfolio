@@ -351,6 +351,7 @@ body::-webkit-scrollbar-thumb {
       box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
     .button__body:active {
       transform: translateY(1px);
+      background-color: #3dead5;
       box-shadow: 0 0.2rem 0.125rem rgba(0, 0, 0, 0.1); }
   .button__link, .button__link:visited {
     text-decoration: none;
