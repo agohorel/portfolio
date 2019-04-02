@@ -13,7 +13,7 @@
         padding: 1rem 2rem;
         background-color: $color-secondary;
         border-radius: $border-radius;
-        transition: .1s linear all;
+        transition: .1s ease-out all;
         text-align: center;
 
         &:hover {

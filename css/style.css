@@ -351,7 +351,7 @@ body::-webkit-scrollbar-thumb {
     padding: 1rem 2rem;
     background-color: #15c6b0;
     border-radius: 3px;
-    transition: .1s linear all;
+    transition: .1s ease-out all;
     text-align: center; }
     .button__body:hover {
       cursor: pointer;
