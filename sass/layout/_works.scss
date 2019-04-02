@@ -26,6 +26,10 @@
         }
     }
 
+    &__websites-container {
+
+    }
+
     &__projects-container {
         display: none;
     }
@@ -37,7 +41,7 @@
         flex-wrap: wrap;
     }
 
-    &__websites-container {
-
+    &__album-container {
+        display: none;
     }
 }
