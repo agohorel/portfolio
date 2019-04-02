@@ -1,10 +1,17 @@
 .about {
-    min-width: 100%;
+    background-image: linear-gradient(rgba($color-nearblack, .85), $color-offwhite);
     min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    &__container {
+        max-width: 67vw;
+        background-color: darken($color-offwhite, 5%);
+        @include shadow(0, .2rem, .25rem, 0.1);
+    }
 
     &__header {
         padding-top: $margin-top;
@@ -29,5 +36,12 @@
 
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
+        transition: 2s ease-in-out all;
+
+        &:hover {
+            transform: rotate(360deg);
+            // filter: invert(100%);
+            filter: hue-rotate(360deg);
+        }
     }
 }

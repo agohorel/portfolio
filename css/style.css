@@ -142,11 +142,16 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.6rem; }
 
 .about {
-  min-width: 100%;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.85), #f3f3f3);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
+  .about__container {
+    max-width: 67vw;
+    background-color: #e6e6e6;
+    box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .about__header {
     padding-top: 3rem;
     font-size: 5rem; }
@@ -162,7 +167,11 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     margin: 2rem;
     shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%); }
+    clip-path: circle(50% at 50% 50%);
+    transition: 2s ease-in-out all; }
+    .about__img:hover {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg); }
 
 .works {
   min-height: 100vh;
