@@ -6,15 +6,24 @@
     &__grid {
         display: grid;
         max-width: calc(100vh - 3rem);
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
 		grid-gap: 1.25rem;
 		padding-bottom: 1.5rem;
 		transition: .2s ease-out opacity;
 
-        &:hover .gallery__item:not(:hover){
+		&--albums {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+		}
+		
+		&--misc {
+			grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+			grid-template-rows: repeat(auto-fit);
+			grid-auto-flow: dense;
+		}
+
+		&:hover .gallery__item:not(:hover){
             opacity: .5;
-        }
+		}
     }
 
     &__item {
@@ -26,6 +35,7 @@
             z-index: 2;
         }
 
+		// for albums grid
 		&--top-left {
 			grid-row: 1 / span 1;
 			grid-column: 1 / span 1;
@@ -51,7 +61,20 @@
 			grid-column: 4 / span 1;
 		}
 
+		// for misc grid
+		&--square {
+			grid-row: span 2;
+			grid-column: span 2;
+		}
 
+		&--flyer {
+			grid-row: span 3;
+			grid-column: span 2;
+		}
+
+		&--wide {
+			grid-column: span 2;
+		}
     }
 
     &__img {

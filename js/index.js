@@ -46,7 +46,8 @@ const dropdownLinks = document.querySelectorAll(".dropdown__link");
 const websitesContainer = document.querySelector(".works__websites-container");
 const projectsContainer = document.querySelector(".works__projects-container");
 const albumsContainer = document.querySelector(".works__album-container");
-const portfolioContainers = [websitesContainer, projectsContainer, albumsContainer];
+const miscContainer = document.querySelector(".works__misc-container");
+const portfolioContainers = [websitesContainer, projectsContainer, albumsContainer, miscContainer];
 
 let currentSelection = "websites";
 

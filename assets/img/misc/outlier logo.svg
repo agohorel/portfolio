@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px"
+	 height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<g id="Layer_7">
+	<rect fill="none" width="1000" height="1000"/>
+</g>
+<g id="Layer_1" display="none">
+	<g display="inline">
+		<defs>
+			<rect id="SVGID_1_" x="481.843" y="135.479" width="347" height="779"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<polygon clip-path="url(#SVGID_2_)" fill="#202020" points="792.427,693.795 481.843,873.111 171.258,693.795 171.258,335.162 
+			481.843,155.847 792.427,335.162 		"/>
+	</g>
+	<polygon display="inline" fill="#3E414C" points="481.843,514.59 481.843,155.847 792.52,335.219 	"/>
+	<polygon display="inline" fill="#414D68" points="481.843,514.591 171.158,335.227 481.832,155.851 	"/>
+	<polygon display="inline" fill="#DFDFDF" points="398.544,466.498 481.843,418.405 565.142,466.498 565.142,562.683 
+		481.843,610.774 398.544,562.683 	"/>
+</g>
+<g id="Layer_1_copy">
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="500" y="120.888" width="346.998" height="779"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<polygon clip-path="url(#SVGID_4_)" fill="#202020" points="500,141.256 189.415,320.572 189.415,679.205 500,858.521 
+			810.582,679.205 810.582,320.572 		"/>
+	</g>
+	<polygon fill="#3E414C" points="500,500 500,141.256 810.676,320.628 	"/>
+	<polygon fill="#414D68" points="500,500 189.315,320.636 499.989,141.26 	"/>
+	<polygon fill="#DFDFDF" points="425.031,456.717 500,413.433 574.967,456.717 574.967,543.283 500,586.564 425.031,543.283 	"/>
+</g>
+<g id="Layer_3" display="none">
+	<rect display="inline" fill="#202020" width="500" height="500"/>
+</g>
+<g id="Layer_3_copy" display="none">
+	<rect x="500" display="inline" fill="#00FF00" width="500" height="500"/>
+</g>
+<g id="Layer_3_copy_3" display="none">
+	<rect x="500" y="500" display="inline" fill="#202020" width="500" height="500"/>
+</g>
+<g id="Layer_3_copy_2" display="none">
+	<rect y="500" display="inline" fill="#00FF00" width="500" height="500"/>
+</g>
+</svg>
