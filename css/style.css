@@ -219,7 +219,7 @@ body::-webkit-scrollbar-thumb {
       max-width: 90vw;
       grid-gap: 2rem;
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-      grid-template-rows: auto;
+      grid-template-rows: min-content 1fr;
       grid-auto-flow: dense; }
     .gallery__grid:hover .gallery__item--zoomable:not(:hover) {
       opacity: .5; }
@@ -245,20 +245,27 @@ body::-webkit-scrollbar-thumb {
     .gallery__item--bottom-right {
       grid-row: 4 / span 1;
       grid-column: 4 / span 1; }
-    for misc grid
-.gallery__item--square {
-      grid-row: span 2;
-      grid-column: span 2; }
+    .gallery__item--square {
+      grid-row: span 1;
+      grid-column: span 1; }
+      .gallery__item--square--center {
+        align-self: center; }
     .gallery__item--flyer {
       grid-row: span 3;
       grid-column: span 2; }
     .gallery__item--wide {
       grid-column: span 2; }
+      .gallery__item--wide--center {
+        align-self: center; }
   .gallery__img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     display: block; }
+    .gallery__img--fill {
+      height: 370px;
+      object-fit: cover;
+      overflow: hidden; }
 
 .card {
   background-color: #e6e6e6;
