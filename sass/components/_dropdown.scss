@@ -1,17 +1,20 @@
 .dropdown {
-    position: relative;
     display: inline-block;
     margin: 1rem;
-
+    
     &__flex-container {
         display: flex;
     }
 
     &__header {
-
+        background-color: $color-offwhite;
+        z-index: 1;
+        position: relative;
     }
 
     &__container {
+        position: relative;
+        z-index: 0;
         visibility: hidden;
         background-color: darken($color-offwhite, 10%);
         width: 100%;
@@ -45,20 +48,20 @@
     &__fadeOut {
         opacity: 0;
         visibility: hidden;
-        transition: .2s linear all;
+        transition: .1s ease-out all;
     }
 
     &__fadeIn {
         opacity: 1;
         visibility: visible;
-        transition: .2s linear all;
+        transition: .3s ease-in all;
     }
 
     &__slide-in {
-        animation: slide-in-dropdown .2s ease-in-out forwards;
+        animation: slide-in-dropdown .2s ease-out forwards;
     }
 
     &__slide-out {
-        animation: slide-out-dropdown .5s ease-in-out forwards;
+        animation: slide-out-dropdown .2s ease-out forwards;
     }
 }

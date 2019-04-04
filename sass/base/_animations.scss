@@ -10,20 +10,20 @@
 
 @keyframes slide-in-dropdown {
 	0% {
-		transform: translateY(5rem) scale(0) rotateX(90deg);
+		transform: translateY(-5rem);
 	}
 
 	100% {
-		transform: translateY(0rem) scale(1) rotateX(0deg);
+		transform: translateY(0rem);
 	}
 }
 
 @keyframes slide-out-dropdown {
 	0% {
-		transform: translateY(0rem) scale(1) rotateX(0deg);
+		transform: translateY(0rem);
 	}
 
 	100% {
-		transform: translateY(5rem) scale(0) rotateX(180deg);
+		transform: translateY(-5rem);
 	}
 }
