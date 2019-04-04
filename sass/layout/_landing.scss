@@ -28,6 +28,16 @@
 			height: 100%;
 			opacity: .75;
 		}
+
+		&--gradient {
+			position: absolute;
+			top: 90vh;
+			left: 0;
+			height: 10vh;
+			width: 100%;
+			z-index: 2;
+			background-image: linear-gradient(rgba(#000, 0), rgba(#000, 1))
+		}
 	}
 
 	&__hello {
