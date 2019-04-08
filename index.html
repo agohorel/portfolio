@@ -358,9 +358,39 @@
 			</div>
 		
 		</div>
-
-
 	
+	</section>
+
+	<section class="contact">
+		<div class="form__container">
+			<form method="POST" action="https://formspree.io/alex.oddlogic@gmail.com">
+				<h2 class="form__title">contact</h2>
+				
+				<div class="form__group">
+					<input name="name" id="name" type="text" class="form__input" placeholder="your name" autocomplete="off"
+						required>
+					<label for="name" class="form__label">your name</label>
+				</div>
+		
+				<div class="form__group">
+					<input name="email" id="emailAddress" type="email" class="form__input" placeholder="your email address"
+						autocomplete="off" required>
+					<label for="emailAddress" class="form__label">your email</label>
+				</div>
+		
+				<div class="form__group">
+					<textarea name="message" id="emailBody" type="text" class="form__input" placeholder="your message"
+						autocomplete="off" required></textarea>
+					<label for="emailBody" class="form__label">your message</label>
+				</div>
+
+				<div class="form__group">
+					<button type="submit" class=" button button__body">
+						<p class="button__link">send &rarr;</p>
+					</button>
+				</div>
+			</form>
+		</div>
 	</section>
 
 	<script src="./js/index.js"></script>

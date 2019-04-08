@@ -23,6 +23,11 @@
             @include shadow(0, .2rem, .25rem, 0.1);
         }
 
+        // for <button> elements
+        &:hover p {
+            color: $color-offwhite;
+        }
+
         &:active {
             transform: translateY(1px);
             background-color: lighten($color-secondary, 15%);

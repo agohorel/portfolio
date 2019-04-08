@@ -55,3 +55,8 @@ body::-webkit-scrollbar-thumb {
   background-color: $color-nearblack;
   outline: 1px solid slategrey;
 }
+
+button {
+	border: none;
+	font-family: inherit;
+}
