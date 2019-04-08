@@ -282,22 +282,23 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 1rem 2rem;
   min-width: 50rem;
-  max-width: 34%;
+  width: 67vw;
   margin: 0 5rem 2rem 3rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2); }
   .card__title {
     margin-bottom: 1rem;
-    font-size: 2rem; }
+    font-size: 2.5rem; }
   .card__img {
     max-width: 67%;
-    max-height: 23rem;
+    max-height: 40rem;
     object-fit: scale-down;
     margin-bottom: 1rem;
     border-radius: 3px; }
   .card__body {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    max-width: 67%; }
     .card__body:not(:last-of-type) {
       margin-bottom: 1rem; }
   .card__list {
@@ -305,6 +306,8 @@ body::-webkit-scrollbar-thumb {
     list-style: square;
     text-align: left;
     margin-bottom: 1rem; }
+  .card__btn-container {
+    display: flex; }
 
 .dropdown {
   display: inline-block;

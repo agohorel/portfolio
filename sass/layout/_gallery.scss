@@ -3,29 +3,29 @@
     display: flex;
     
     &__grid {
-        display: grid;
+		display: grid;
 		padding-bottom: 1.5rem;
 		transition: .2s ease-out opacity;
 
-		&--albums {
-			max-width: calc(100vh - 3rem);
-			grid-gap: 1.25rem;
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-rows: repeat(4, 1fr);
-		}
-		
-		&--misc {
-			max-width: 90vw;
-			grid-gap: 2rem;
-			grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-			// grid-template-rows: auto;
-			grid-template-rows: min-content 1fr;
-			grid-auto-flow: dense;
-		}
+			&--albums {
+				max-width: calc(100vh - 3rem);
+				grid-gap: 1.25rem;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+			}
+			
+			&--misc {
+				max-width: 90vw;
+				grid-gap: 2rem;
+				grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+				// grid-template-rows: auto;
+				grid-template-rows: min-content 1fr;
+				grid-auto-flow: dense;
+			}
 
-		&:hover .gallery__item--zoomable:not(:hover){
-			opacity: .5;
-		}
+			&:hover .gallery__item--zoomable:not(:hover){
+				opacity: .5;
+			}
     }
 
     &__item {
@@ -33,11 +33,11 @@
 		align-self: start;
 		transition: .2s ease-out all;
 
-		&--zoomable {
-			&:hover {
-				transform: scale(1.75);
-				z-index: 2;
-			}
+			&--zoomable {
+				&:hover {
+					transform: scale(1.75);
+					z-index: 2;
+				}
 		}
 
 		// for albums grid
