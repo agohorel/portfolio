@@ -67,6 +67,20 @@ button {
   100% {
     transform: translateY(-5rem); } }
 
+@keyframes shaky {
+  10% {
+    transform: skewX(-15deg); }
+  20% {
+    transform: skewX(15deg); }
+  30% {
+    transform: skewX(-7deg); }
+  40% {
+    transform: skewX(7deg); }
+  50% {
+    transform: skewX(0deg); }
+  100% {
+    transform: skewX(0deg); } }
+
 .nav {
   position: absolute;
   top: 2rem;
@@ -172,6 +186,16 @@ button {
   .about__paragraph {
     font-size: 1.6rem;
     hyphens: auto; }
+    .about__paragraph:first-of-type {
+      font-size: 3rem; }
+    .about__paragraph:not(:last-child) {
+      margin-bottom: 1rem; }
+    .about__paragraph--shaky {
+      display: inline-block;
+      animation: shaky 2s ease-out infinite; }
+  .about__link, .about__link:visited {
+    text-decoration: underline;
+    color: #15c6b0; }
   .about__img {
     float: right;
     width: 25rem;
@@ -428,7 +452,7 @@ button {
   margin-bottom: 1rem; }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
 
 .form__input {
   font-size: 2rem;

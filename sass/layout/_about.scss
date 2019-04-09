@@ -25,6 +25,25 @@
     &__paragraph {
         font-size: $font-paragraph;
         hyphens: auto;
+
+        &:first-of-type {
+            font-size: 3rem;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        &--shaky {
+            display: inline-block;
+            animation: shaky 2s ease-out infinite;
+        }
+    }
+
+    &__link, 
+    &__link:visited {
+        text-decoration: underline;
+        color: $color-secondary;
     }
 
     &__img {
