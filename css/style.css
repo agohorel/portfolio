@@ -310,6 +310,37 @@ button {
   justify-content: center;
   align-items: center; }
 
+.footer {
+  height: 10rem;
+  width: 100%;
+  background-color: #1a1a1a; }
+  .footer__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .footer__nav-items {
+    list-style-type: none; }
+  .footer__nav-item {
+    display: inline-block;
+    margin-right: 2rem; }
+  .footer__nav-link, .footer__nav-link:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #f3f3f3;
+    transition: .2s linear color; }
+    .footer__nav-link:hover, .footer__nav-link:visited:hover {
+      color: #15c6b0;
+      text-decoration: line-through; }
+  .footer__devtag {
+    text-align: center;
+    background-color: inherit; }
+    .footer__devtag p {
+      color: #747474; }
+      .footer__devtag p:last-child {
+        padding-bottom: 2rem; }
+
 .card {
   background-color: #e6e6e6;
   display: flex;

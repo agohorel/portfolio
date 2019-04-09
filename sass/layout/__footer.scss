@@ -1,0 +1,51 @@
+.footer {
+    height: 10rem;
+    width: 100%;
+    background-color: $color-nearblack;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__nav {
+
+        &-items {
+            list-style-type: none;
+        }
+
+        &-item {
+            display: inline-block;
+            margin-right: 2rem;
+        }
+
+        &-link,
+        &-link:visited {
+            font-size: $font-h3;
+            text-decoration: none;
+            color: $color-offwhite;
+            transition: .2s linear color;
+
+            &:hover {
+                color: $color-secondary;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &__devtag {
+        text-align: center;
+        background-color: inherit;
+
+        & p {
+            color: darken($color-offwhite, 50%);
+            
+            &:last-child {
+                padding-bottom: 2rem;
+            }            
+        }
+    }
+}
