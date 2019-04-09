@@ -1,5 +1,5 @@
 .contact {
-    background-image: linear-gradient($color-offwhite, $color-darkgrey);
+    background-image: linear-gradient($color-offwhite, darken($color-offwhite, 25%));
     min-height: 100vh;
     display: flex;
     justify-content: center;

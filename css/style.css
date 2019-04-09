@@ -304,14 +304,14 @@ button {
       overflow: hidden; }
 
 .contact {
-  background-image: linear-gradient(#f3f3f3, rgba(26, 26, 26, 0.85));
+  background-image: linear-gradient(#f3f3f3, #b3b3b3);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .footer {
-  height: 10rem;
+  height: auto;
   width: 100%;
   background-color: #1a1a1a; }
   .footer__container {
@@ -319,7 +319,8 @@ button {
     height: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    padding: 2rem; }
   .footer__nav-items {
     list-style-type: none; }
   .footer__nav-item {
@@ -339,7 +340,7 @@ button {
     .footer__devtag p {
       color: #747474; }
       .footer__devtag p:last-child {
-        padding-bottom: 2rem; }
+        padding-bottom: 1rem; }
 
 .card {
   background-color: #e6e6e6;

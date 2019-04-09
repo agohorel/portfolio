@@ -1,5 +1,5 @@
 .footer {
-    height: 10rem;
+    height: auto;
     width: 100%;
     background-color: $color-nearblack;
 
@@ -9,6 +9,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 2rem;
     }
 
     &__nav {
@@ -44,7 +45,7 @@
             color: darken($color-offwhite, 50%);
             
             &:last-child {
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
             }            
         }
     }
