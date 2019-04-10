@@ -1,3 +1,5 @@
+p5.disableFriendlyErrors = true;
+
 let canvasDiv, w, h, cnv;
 
 let numParticles = 250;
@@ -9,6 +11,7 @@ let cols, rows;
 let zOffset = 0;
 let particles = [];
 let flowField = [];
+let particleNerfCount = 0;
 
 function setup() {
 	canvasDiv = document.getElementById("p5-container");
@@ -35,12 +38,7 @@ function setup() {
 }
 
 function draw() {
-	if (frameCount % 5 === 0){
-		bg(20);
-		console.log(particles.length);
-	} else {
-		bg(0);
-	}
+	frameCount % 5 === 0 ? bg(20) : bg(0);
 
 	let xOffset = 0;
 	for (let x = 0; x < cols; x++) {
@@ -119,6 +117,7 @@ function Particle(xSpawnLoc, ySpawnLoc, index) {
 
 	this.edgeReaction = function (){
 		particles.splice(this.index, 1);
+		// generate new particle w/ floating point index to reduce probability of index collisions
 		particles.push(new Particle(random(width), random(height), random(particles.length)));
 	}
 
@@ -158,13 +157,16 @@ function bg(opacity){
 }
 
 function populationManager(){
-	if (frameRate() < 57 && particles.length > minParticles) {
+	if (frameRate() < 55 && particles.length > minParticles) {
 		// remove particle
 		particles.pop();
+		particleNerfCount++;
 	}
 
-	else if (frameRate() > 57 && particles.length < maxParticles){
-		// add new particle
-		particles.push(new Particle(random(width), random(height), random(particles.length)));
+	if (frameRate() > 50 && particles.length < maxParticles){
+		// if we keep having to remove particles, stop adding them
+		if (particleNerfCount < 100){
+			particles.push(new Particle(random(width), random(height), random(particles.length)));
+		}
 	}
 }
