@@ -363,14 +363,42 @@ button {
     overflow: hidden;
     margin-bottom: 1rem;
     border-radius: 3px; }
-    .card__img-container:hover .card__img {
-      transform: scale(1.05); }
   .card__img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
     transition: .5s ease transform; }
+    .card__img--aleph {
+      background-size: cover;
+      background-position: center;
+      height: 40vh;
+      width: 40vw;
+      background-image: url("../assets/img/aleph-ui.png"); }
+      .card__img--aleph:hover {
+        transform: scale(1.02); }
+    .card__img--droenbot {
+      background-size: cover;
+      background-position: center;
+      height: 40vh;
+      width: 40vw;
+      background-image: url("../assets/img/droenbot.png"); }
+      .card__img--droenbot:hover {
+        transform: scale(1.2); }
+    .card__img--bend {
+      background-size: cover;
+      background-position: center;
+      transform-origin: 100% 0%;
+      height: 40vh;
+      width: 40vw;
+      background-image: url("../assets/img/bend.png"); }
+      .card__img--bend:hover {
+        transform: scale(1.5); }
+    .card__img--racket {
+      background-size: cover;
+      background-position: center;
+      transform-origin: top;
+      height: 40vh;
+      width: 40vw;
+      background-image: url("../assets/img/racket.jpg"); }
+      .card__img--racket:hover {
+        transform: scale(1.6); }
   .card__body {
     font-size: 1.4rem;
     max-width: 67%; }
