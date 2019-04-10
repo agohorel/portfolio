@@ -5,7 +5,7 @@ let increment = .1;
 let scale = 20;
 let cols, rows;
 let zOffset = 0;
-let particles = new Array(numParticles);
+let particles = [];
 let flowField = [];
 
 function setup() {
@@ -15,7 +15,6 @@ function setup() {
 	cnv = createCanvas(w, h);
 	cnv.parent("p5-container");
 
-	pixelDensity(1);
 	bg(255);
 	noiseSeed(2018);
 
@@ -26,7 +25,7 @@ function setup() {
 	flowField = new Array(cols * rows);
 
 	// instantiate particle class
-	for (let i = 0; i < particles.length; i++) {
+	for (let i = 0; i < numParticles; i++) {
 		let x = random(width);
 		let y = random(height);
 		particles[i] = new Particle(x, y, i);
@@ -36,7 +35,6 @@ function setup() {
 function draw() {
 	if (frameCount % 5 === 0){
 		bg(20);
-		if (particles.length > numParticles) console.log("# of particles exceeded limit!!!");
 	} else {
 		bg(0);
 	}
@@ -117,15 +115,13 @@ function Particle(xSpawnLoc, ySpawnLoc, index) {
 
 	this.edgeReaction = function (){
 		particles.splice(this.index, 1);
-		particles.push(new Particle(random(width), random(height), numParticles-1));
+		particles.push(new Particle(random(width), random(height), random(particles.length)));
 	}
 
 	this.display = function() {
-		let xScaled = map(this.pos.x, width/2, width, 0, 180);
+		let xScaled = map(this.pos.x, 0, width, 0, 180);
 		let yScaled = map(this.pos.y, 0, height, 0, 180);
 		let variation = random(-20, 20);
-
-		// console.log(this.thickness);
 
 		strokeWeight(this.thickness);
 		stroke((xScaled + yScaled * .2) + variation, 
