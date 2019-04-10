@@ -1,6 +1,8 @@
 let canvasDiv, w, h, cnv;
 
-let numParticles = 500;
+let numParticles = 250;
+let minParticles = 100;
+let maxParticles = 1000;
 let increment = .1;
 let scale = 20;
 let cols, rows;
@@ -35,6 +37,7 @@ function setup() {
 function draw() {
 	if (frameCount % 5 === 0){
 		bg(20);
+		console.log(particles.length);
 	} else {
 		bg(0);
 	}
@@ -62,6 +65,7 @@ function draw() {
 		zOffset += increment * 0.001;
 	}
 	
+	populationManager();
 
 	for (let i = 0; i < particles.length; i++) {
 		particles[i].follow(flowField);
@@ -151,4 +155,16 @@ function bg(opacity){
 	fill(0, opacity);
 	rect(0, 0, width, height);
 	colorMode(HSB, 100);
+}
+
+function populationManager(){
+	if (frameRate() < 57 && particles.length > minParticles) {
+		// remove particle
+		particles.pop();
+	}
+
+	else if (frameRate() > 57 && particles.length < maxParticles){
+		// add new particle
+		particles.push(new Particle(random(width), random(height), random(particles.length)));
+	}
 }
