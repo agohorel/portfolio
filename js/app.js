@@ -2,9 +2,7 @@ p5.disableFriendlyErrors = true;
 
 let canvasDiv, w, h, cnv;
 
-let numParticles = 250;
-let minParticles = 100;
-let maxParticles = 1000;
+let numParticles, minParticles, maxParticles;
 let increment = .1;
 let scale = 20;
 let cols, rows;
@@ -13,12 +11,36 @@ let particles = [];
 let flowField = [];
 let particleNerfCount = 0;
 
+function getScreenArea() {
+	// get the screen area in pixels
+	let deviceWidth = window.outerWidth;
+	let deviceHeight = window.outerHeight;
+	let deviceArea = deviceWidth * deviceHeight;
+	// get the pixel density
+	let pixelDensity = window.devicePixelRatio;
+	// factor in pixel density
+	return deviceArea = deviceArea / pixelDensity;
+}
+
+function setupParticleRanges(){
+	// lower bound is iphone 5 screen, upper bound is 4k display w/ 1:1 pixel density
+	numParticles = Math.floor(map(getScreenArea(), 90880, 8294400, 100, 1000));
+	minParticles = Math.floor(map(getScreenArea(), 90880, 8294400, 50, 500));
+	maxParticles = Math.floor(map(getScreenArea(), 90880, 8294400, 400, 1000));
+
+	console.log(`starting particles: ${numParticles}`);
+	console.log(`min particles: ${minParticles}`);
+	console.log(`max particles: ${maxParticles}`);
+}
+
 function setup() {
 	canvasDiv = document.getElementById("p5-container");
 	w = canvasDiv.offsetWidth;
 	h = canvasDiv.offsetHeight;
 	cnv = createCanvas(w, h);
 	cnv.parent("p5-container");
+
+	setupParticleRanges();
 
 	bg(255);
 	noiseSeed(2018);
@@ -35,6 +57,7 @@ function setup() {
 		let y = random(height);
 		particles[i] = new Particle(x, y, i);
 	}
+	console.log(particles.length);
 }
 
 function draw() {
