@@ -36,3 +36,37 @@
 	50% { transform: skewX(0deg); }
 	100% { transform: skewX(0deg); }  
 }
+
+@keyframes fadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		display: block;
+		opacity: 1;
+	}
+
+	99% {
+		display: block;
+		opacity: .01;
+	}
+
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}

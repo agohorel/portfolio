@@ -62,16 +62,25 @@ function setPortfolioView(elem, target){
         return container.getAttribute("data-container").indexOf(target) > -1;
     });
 
-    matching[0].style.display = "block";
-
     let nonMatching = elem.filter((container) => {
         return container.getAttribute("data-container").indexOf(target) < 0;
     });
 
     nonMatching.forEach((nonMatchingElement) => {
-        nonMatchingElement.style.display = "none";
+        if (window.getComputedStyle(nonMatchingElement).display === "block"){
+            nonMatchingElement.classList.remove("u-fadeIn");
+            nonMatchingElement.classList.add("u-fadeOut");
+            setTimeout(() => {
+                nonMatchingElement.style.display = "none";
+            }, 200);
+        }
     });
 
+    setTimeout(() => {
+        matching[0].classList.remove("u-fadeOut");
+        matching[0].classList.add("u-fadeIn");
+        matching[0].style.display = "block";
+    }, 200);
 }
 
 // scrolling progress indicator
