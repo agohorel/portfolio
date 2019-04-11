@@ -1,0 +1,19 @@
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+    &__container {
+        height: 4px;
+        width: 100%;
+        background: rgba($color-offwhite, 0);
+    }
+
+    &__bar {
+        height: 4px;
+        width: 0%;
+        background-image: linear-gradient(to right, $color-offwhite, $color-secondary);
+    }
+}
