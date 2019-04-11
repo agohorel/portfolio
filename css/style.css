@@ -186,13 +186,16 @@ button {
   .landing__h2 {
     color: #f3f3f3;
     font-size: 2rem;
-    font-weight: 400; }
+    font-weight: 400;
+    transition: .2s ease color; }
     .landing__h2--blue {
       color: #15c6b0; }
   .landing__h3 {
     color: #f3f3f3;
     font-weight: 300;
     font-size: 1.6rem; }
+  .landing__link:hover h2 {
+    color: #6befdf; }
 
 .about {
   background-image: linear-gradient(rgba(26, 26, 26, 0.85), #f3f3f3);

@@ -73,10 +73,10 @@
 		color: $color-offwhite;
 		font-size: 2rem;
 		font-weight: 400;	
+		transition: .2s ease color;
 	
 		&--blue {
 			color: $color-secondary;
-			// margin-top: .5rem;
 		}
 	}
 
@@ -84,6 +84,10 @@
 		color: $color-offwhite;
 		font-weight: 300;
 		font-size: 1.6rem;
+	}
+
+	&__link:hover h2 {
+		color: lighten($color-secondary, 25%);
 	}
 
 }
