@@ -92,7 +92,7 @@ button {
   .nav__item:not(:last-of-type) {
     margin-right: 3rem; }
   .nav__link {
-    font-size: 4vw;
+    font-size: calc(24px + 2.5vw);
     color: #f3f3f3;
     transition: .1s ease all; }
     .nav__link:hover {

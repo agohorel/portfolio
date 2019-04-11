@@ -19,7 +19,7 @@
 
 	// refers to anchor tags
 	&__link {
-		font-size: 4vw;
+		font-size: calc(24px + 2.5vw);
 		color: $color-offwhite;
 		transition: .1s ease all;
 
