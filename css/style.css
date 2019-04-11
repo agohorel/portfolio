@@ -145,10 +145,9 @@ button {
     align-items: center;
     text-align: center; }
   .landing__textbox {
-    margin-top: 3rem;
-    padding: 1rem;
+    padding: 2rem 4rem;
     height: auto;
-    width: 50vw;
+    width: auto;
     background-color: rgba(26, 26, 26, 0.75);
     border-radius: 3px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }

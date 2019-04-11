@@ -55,10 +55,9 @@
 	}
 
 	&__textbox {
-		margin-top: 3rem;
-		padding: 1rem;
+		padding: 2rem 4rem;
 		height: auto;
-		width: 50vw;
+		width: auto;
 		background-color: rgba($color-nearblack, .75);
 		border-radius: $border-radius;
 		box-shadow: 0 0 1rem rgba(black, 0.2);
@@ -73,10 +72,11 @@
 	&__h2 {
 		color: $color-offwhite;
 		font-size: 2rem;
-		font-weight: 400;
+		font-weight: 400;	
 	
 		&--blue {
 			color: $color-secondary;
+			// margin-top: .5rem;
 		}
 	}
 

@@ -82,3 +82,36 @@ window.onscroll = () => {
     let progressBar = document.querySelector(".scroll-progress__bar");
     progressBar.style.width = scrolled + "%";
 }
+
+// typing animation
+const landingText1 = document.getElementById("landing-text-1");
+const landingText2 = document.getElementById("landing-text-2");
+const landingText3 = document.getElementById("landing-text-3");
+
+let txt1 = "Hi, I'm Alex.";
+let txt2 = "I'm a web developer and graphic designer and I want to work for you.";
+let txt3 = "Hiring? Want to build something? Let's talk!";
+
+let speed1 = 75;
+let speed2 = 35;
+let speed3 = 50;
+
+function typewriter(elem, txt, speed) {
+    for (let i = 0; i < txt.length; i++) {
+        setTimeout(() => {
+            elem.innerHTML += txt.charAt(i);
+        }, speed * i);
+    }
+}
+
+setTimeout(() => {
+    typewriter(landingText1, txt1, speed1);
+}, 750);
+
+setTimeout(() => {
+    typewriter(landingText2, txt2, speed2);
+}, txt1.length * speed1 + 750);
+
+setTimeout(() => {
+    typewriter(landingText3, txt3, speed3);
+}, txt2.length * speed3 + 750);
