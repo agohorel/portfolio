@@ -1,5 +1,5 @@
 .about {
-    background-image: linear-gradient(rgba($color-nearblack, .85), $color-offwhite);
+    background-image: linear-gradient(lighten($color-darkgrey, 14%), $color-offwhite);
     min-height: 100vh;
 
     display: flex;

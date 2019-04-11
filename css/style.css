@@ -24,7 +24,8 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(26, 26, 26, 0.85); }
 
 a,
 a:visited {
@@ -198,7 +199,7 @@ button {
     color: #6befdf; }
 
 .about {
-  background-image: linear-gradient(rgba(26, 26, 26, 0.85), #f3f3f3);
+  background-image: linear-gradient(rgba(62, 62, 62, 0.85), #f3f3f3);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
