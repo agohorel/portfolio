@@ -54,6 +54,10 @@ for (let i = 0; i < dropdownLinks.length; i++){
     dropdownLinks[i].addEventListener("click", () => {
         currentSelection = dropdownLinks[i].innerText;
         setPortfolioView(portfolioContainers, currentSelection);
+        // timeout to wait for visbility animations to change
+        setTimeout(() => {
+            updateScrollPositionIndicator();    
+        }, 250);
     });
 }
 
@@ -85,6 +89,10 @@ function setPortfolioView(elem, target){
 
 // scrolling progress indicator
 window.onscroll = () => {
+    updateScrollPositionIndicator();
+};
+
+function updateScrollPositionIndicator() {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
