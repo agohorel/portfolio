@@ -139,9 +139,10 @@ function Particle(xSpawnLoc, ySpawnLoc, index) {
 	}
 
 	this.edgeReaction = function (){
+		// remove out of bounds particle
 		particles.splice(this.index, 1);
-		// generate new particle w/ floating point index to reduce probability of index collisions
-		particles.push(new Particle(random(width), random(height), random(particles.length)));
+		// generate new particle w/ fresh index
+		particles.push(new Particle(random(width), random(height), makeUniqueIndex()));
 	}
 
 	this.display = function() {
@@ -189,7 +190,16 @@ function populationManager(){
 	if (frameRate() > 50 && particles.length < maxParticles){
 		// if we keep having to remove particles, stop adding them
 		if (particleNerfCount < 100){
-			particles.push(new Particle(random(width), random(height), random(particles.length)));
+			particles.push(new Particle(random(width), random(height), makeUniqueIndex()));
 		}
 	}
+}
+
+function makeUniqueIndex() {
+	// prevent collisions by taking averaged sum of all previous particle indexes to generate unique ones
+	let sum = 0;
+	for (let i = 0; i < particles.length; i++) {
+		sum += particles[i].index;
+	}
+	return sum / particles.length;
 }
