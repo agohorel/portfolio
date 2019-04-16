@@ -96,10 +96,10 @@
 		object-fit: cover;
 		display: block;
 
-		&--fill {
-			height: 370px;
-			object-fit: cover;
-			overflow: hidden;
-		}
+			&--fill {
+				height: 370px;
+				object-fit: cover;
+				overflow: hidden;
+			}
     }
 }

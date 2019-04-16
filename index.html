@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 	<title>Alex Gohorel - webdev & design</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
 				</div>
 			</div>
 
-			<div class="landing__hello">
+			<div class="landing__hello lax" data-lax-opacity="0 1, (document.body.scrollHeight*0.15) 0">
 				<div class="landing__textbox">
 					<h1 id="landing-text-1" class="landing__h1"></h1>
 					<h2 id="landing-text-2" class="landing__h2"></h2>
@@ -51,14 +52,17 @@
 
 	<section id="about-page" class="about">
 		<h1 class="about__header">about</h1>
-		<div class="about__container">
+		<div class="about__container lax" data-lax-preset="fadeIn zoomIn">
 			<div class="about__body">
 				<img src="assets/img/portrait.png" alt="portrait" class="about__img">
 				<p class="about__paragraph">
 					Hi, my name is Alex Gohorel. I'm a Philadelphia based web developer and designer.
 				</p>
 				<p class="about__paragraph">
-					I love <span class="about__paragraph--shaky">making things</span>. As far back as I can remember I've been mesmerized by the creative potential of technology. Some
+					<strong>I love <span class="about__paragraph--shaky">making things</span>.</strong>
+				</p>
+				<p class="about__paragraph">
+					As far back as I can remember I've been mesmerized by the creative potential of technology. Some
 					of my earliest memories are doodling in MacPaint on my dad's black and white Macintosh 128k. A few years later I picked
 					up Macromedia Flash and started designing graphics and making animations. Fast forward a few more years and I decided to
 					<a href="https://outlierrecordings.bandcamp.com/" class="about__link">start a record label</a> for experimental electronic music which taught me a lot about branding and design and eventually
@@ -108,7 +112,7 @@
 			</div>
 		</div>
 
-		<div class="works__websites-container" data-container="websites">
+		<div class="works__websites-container lax" data-lax-preset="blurIn" data-container="websites">
 			<div class="website">
 				<h3 class="website__title">woulg.com</h3>
 				<div class="website__gallery">
@@ -393,7 +397,7 @@
 	</section>
 
 	<section id="contact-page" class="contact">
-		<div class="form__container">
+		<div class="form__container lax" data-lax-preset="fadeIn zoomIn">
 			<form method="POST" action="https://formspree.io/alex.oddlogic@gmail.com" autocomplete="off">
 				<h2 class="form__title">contact</h2>
 				

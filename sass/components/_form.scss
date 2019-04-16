@@ -2,7 +2,8 @@
     &__container {
         background-color: rgba($color-offwhite, .25);
         padding: 1rem 3rem 3rem 3rem;
-        border-radius: $border-radius;
+		border-radius: $border-radius;
+		transition: .5s ease all;
         @include shadow(0, .2rem, .25rem, 0.2);
     }
 

@@ -132,3 +132,16 @@ setTimeout(() => {
 setTimeout(() => {
     typewriter(landingText3, txt3, speed3);
 }, txt2.length * speed3 + 750);
+
+// jaxxx.js
+
+window.onload = function () {
+    lax.setup() // init
+
+    const updateLax = () => {
+        lax.update(window.scrollY)
+        window.requestAnimationFrame(updateLax)
+    }
+
+    window.requestAnimationFrame(updateLax)
+}

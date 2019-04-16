@@ -10,6 +10,7 @@
     &__container {
         max-width: 67vw;
         background-color: darken($color-offwhite, 5%);
+        transition: .5s ease all;
         @include shadow(0, .2rem, .25rem, 0.1);
     }
 

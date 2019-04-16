@@ -208,6 +208,7 @@ button {
   .about__container {
     max-width: 67vw;
     background-color: #e6e6e6;
+    transition: .5s ease all;
     box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .about__header {
     padding-top: 3rem;
@@ -258,6 +259,8 @@ button {
     .works__category:hover {
       cursor: pointer;
       color: #5a5a5a; }
+  .works__websites-container {
+    transition: .5s ease all; }
   .works__projects-container {
     display: none; }
   .works__projects-flex-container {
@@ -544,6 +547,7 @@ button {
   background-color: rgba(243, 243, 243, 0.25);
   padding: 1rem 3rem 3rem 3rem;
   border-radius: 3px;
+  transition: .5s ease all;
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2); }
 
 .form__title {
