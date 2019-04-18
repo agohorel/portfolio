@@ -26,6 +26,13 @@ for (let i = 0; i < categories.length; i++){
     });
 }
 
+// hide dropdowns if user clicks outside of dropdown container
+window.addEventListener("click", (event) => {
+    if (event.target.closest(".dropdown__flex-container")) return;
+    forceHidden(dropdownWeb);
+    forceHidden(dropdownDesign);
+});
+
 function toggleVisibility(element){
     element.classList.toggle("dropdown__fadeIn");
     element.classList.toggle("dropdown__fadeOut");
