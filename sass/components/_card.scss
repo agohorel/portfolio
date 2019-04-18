@@ -17,21 +17,23 @@
     }
 
     &__img-container {
-        max-width: 67%;
-        max-height: 40rem;
+        // max-width: 67%;
+        // max-height: 40rem;
+        width: 40vw;
+        height: 30vw;
         overflow: hidden;
         margin-bottom: 1rem;
         border-radius: $border-radius;
     }
 
     &__img {
+        height: 100%;
+        width: 100%;
         transition: .5s ease transform;
 
         &--aleph {
             background-size: cover;
             background-position: center;
-            height: 40vh;
-            width: 40vw;
             background-image: url("../assets/img/aleph-ui.png");
 
             &:hover {
@@ -42,8 +44,6 @@
         &--droenbot {
             background-size: cover;
             background-position: center;
-            height: 40vh;
-            width: 40vw;
             background-image: url("../assets/img/droenbot.png");
 
             &:hover {
@@ -55,8 +55,6 @@
             background-size: cover;
             background-position: center;
             transform-origin: 100% 0%;
-            height: 40vh;
-            width: 40vw;
             background-image: url("../assets/img/bend.png");
 
             &:hover {
@@ -68,8 +66,6 @@
             background-size: cover;
             background-position: center;
             transform-origin: top;
-            height: 40vh;
-            width: 40vw;
             background-image: url("../assets/img/racket.jpg");
 
             &:hover {
