@@ -242,7 +242,7 @@ button {
       filter: hue-rotate(360deg); }
 
 .works {
-  min-height: 100vh;
+  height: auto;
   width: 100%;
   background-color: #f3f3f3;
   display: flex;
@@ -339,10 +339,10 @@ button {
 
 .contact {
   background-image: linear-gradient(#f3f3f3, #b3b3b3);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 7rem; }
 
 .footer {
   height: auto;
