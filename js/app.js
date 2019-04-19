@@ -139,10 +139,9 @@ function Particle(xSpawnLoc, ySpawnLoc, index) {
 	}
 
 	this.edgeReaction = function (){
-		// remove out of bounds particle
-		particles.splice(this.index, 1);
-		// generate new particle w/ fresh index
-		particles.push(new Particle(random(width), random(height), makeUniqueIndex()));
+		// move out of bounds particle to random location 
+		this.pos.x = random(width);
+		this.pos.y = random(height);
 	}
 
 	this.display = function() {
