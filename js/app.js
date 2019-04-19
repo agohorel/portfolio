@@ -82,8 +82,8 @@ function draw() {
 			yOffset += increment;
 		}
 		xOffset += increment;
-		// increment "time" more slowly
-		zOffset += increment * 0.001;
+		// increment "time" more slowly, with some oscillation
+		zOffset += increment * sin(xOffset) * 0.0075;
 	}
 	
 	populationManager();
