@@ -101,5 +101,15 @@
 				object-fit: cover;
 				overflow: hidden;
 			}
-    }
+		}
+		
+	@include responsive($tablet-portrait){		
+
+		&__grid{
+			&--albums {
+				max-width: 90vw;
+			}
+		}
+	}
+
 }

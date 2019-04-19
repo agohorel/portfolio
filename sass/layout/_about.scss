@@ -64,4 +64,11 @@
             filter: hue-rotate(360deg);
         }
     }
+
+    @include responsive($tablet-portrait){
+        &__container {
+            max-width: 90vw;
+        }
+    }
+
 }
