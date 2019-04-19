@@ -10,6 +10,7 @@ let zOffset = 0;
 let particles = [];
 let flowField = [];
 let particleNerfCount = 0;
+let badFrameRateCount = 0;
 
 function getScreenArea() {
 	// get the screen area in pixels
@@ -180,14 +181,24 @@ function bg(opacity){
 }
 
 function populationManager(){
-	if (frameRate() < 55 && particles.length > minParticles) {
-		// remove particle
-		particles.pop();
-		particleNerfCount++;
+	if (frameRate() < 50) {
+		// increment bad frame counter because framerate is too low
+		badFrameRateCount++;
+		// check if we've gotten more than 10 bad frames in a row
+		if (badFrameRateCount > 10 && particles.length > minParticles){
+			console.log(`there have been ${badFrameRateCount} bad frames. removing a particle.`);
+			// remove a particle from the array
+			particles.pop();
+			particleNerfCount++;
+			// reset bad frame counter
+			badFrameRateCount = 0;
+		}
 	}
 
-	if (frameRate() > 50 && particles.length < maxParticles){
-		// if we keep having to remove particles, stop adding them
+	if (frameRate() > 55 && particles.length < maxParticles){
+		// reset bad frame counter to zero because we just got a good frame
+		badFrameRateCount = 0;
+		// add new particle if framerate is good and we haven't had to delete too many particles
 		if (particleNerfCount < 100){
 			particles.push(new Particle(random(width), random(height), makeUniqueIndex()));
 		}
