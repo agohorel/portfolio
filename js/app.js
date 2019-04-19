@@ -61,7 +61,7 @@ function setup() {
 }
 
 function draw() {
-	frameCount % 5 === 0 ? bg(20) : bg(0);
+	frameCount % 2 === 0 ? bg(15) : bg(5);
 
 	let xOffset = 0;
 	for (let x = 0; x < cols; x++) {
