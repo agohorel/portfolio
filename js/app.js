@@ -58,7 +58,6 @@ function setup() {
 		let y = random(height);
 		particles[i] = new Particle(x, y, i);
 	}
-	console.log(particles.length);
 }
 
 function draw() {
