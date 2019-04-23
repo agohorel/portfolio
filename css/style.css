@@ -371,8 +371,9 @@ button {
   .footer__nav-items {
     list-style-type: none; }
   .footer__nav-item {
-    display: inline-block;
-    margin-right: 2rem; }
+    display: inline-block; }
+    .footer__nav-item:not(:last-of-type) {
+      margin-right: 2rem; }
   .footer__nav-link, .footer__nav-link:visited {
     font-size: 2rem;
     text-decoration: none;
@@ -388,6 +389,9 @@ button {
       color: #747474; }
       .footer__devtag p:last-child {
         padding-bottom: 1rem; }
+  @media only screen and (max-width: 600px) {
+    .footer__nav-item:not(:last-of-type) {
+      margin-right: 4rem; } }
 
 .card {
   background-color: #e6e6e6;

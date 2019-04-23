@@ -20,7 +20,9 @@
 
         &-item {
             display: inline-block;
-            margin-right: 2rem;
+            &:not(:last-of-type){
+                margin-right: 2rem;
+            }            
         }
 
         &-link,
@@ -47,6 +49,17 @@
             &:last-child {
                 padding-bottom: 1rem;
             }            
+        }
+    }
+
+    @include responsive($phone){
+        &__nav {
+
+            &-item {
+                &:not(:last-of-type){
+                    margin-right: 4rem;
+                }
+            }
         }
     }
 }
