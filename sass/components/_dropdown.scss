@@ -64,4 +64,24 @@
     &__slide-out {
         animation: slide-out-dropdown .2s ease-out forwards;
     }
+
+    @include responsive($tablet-landscape){
+        &__header {
+            font-size: 2rem;
+        }
+
+        &__link {
+            font-size: 1.8rem;
+        }
+    }
+
+    @include responsive($phone){
+        &__header {
+            font-size: 3rem;
+        }
+
+        &__link {
+            font-size: 3rem;
+        }
+    }
 }

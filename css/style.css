@@ -492,6 +492,16 @@ button {
     animation: slide-in-dropdown .2s ease-out forwards; }
   .dropdown__slide-out {
     animation: slide-out-dropdown .2s ease-out forwards; }
+  @media only screen and (max-width: 75em) {
+    .dropdown__header {
+      font-size: 2rem; }
+    .dropdown__link {
+      font-size: 1.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .dropdown__header {
+      font-size: 3rem; }
+    .dropdown__link {
+      font-size: 3rem; } }
 
 .website {
   text-align: center;
