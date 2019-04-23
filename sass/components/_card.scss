@@ -90,7 +90,52 @@
         display: flex;
     }
 
+    @include responsive($tablet-landscape){
+        flex-basis: 67%;
+
+        &__img-container {
+            width: 63vw;
+            height: 45vw;
+        }
+
+        &__body {
+            max-width: 70vw;
+            font-size: 1.8rem;
+        }
+
+        &__list {
+            font-size: 1.6rem;
+        }
+    }
+
     @include responsive($tablet-portrait){
-        width: 80vw;
+        flex-basis: 80%;
+
+        &__img-container {
+            width: 70vw;
+            height: 50vw;
+        }
+
+        &__body {
+            max-width: 70vw;
+        }
+    }
+
+    @include responsive($phone){
+        flex-basis: 90%;
+
+        &__img-container {
+            width: 70vw;
+            height: 50vw;
+        }
+
+        &__body {
+            max-width: 70vw;
+            font-size: 2.2rem;
+        }
+
+        &__list {
+            font-size: 2rem;
+        }
     }
 }

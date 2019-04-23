@@ -37,4 +37,17 @@
     &__dev {
         margin-bottom: 2rem;
     }
+
+    @include responsive($tablet-portrait){
+        max-width: 90vw;
+
+        &__body {
+            font-size: 2rem;
+            margin-bottom: .5rem;
+        }
+
+        &__dev {
+            font-size: 1.4rem;
+        }
+    }
 }
