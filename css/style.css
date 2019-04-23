@@ -212,7 +212,8 @@ button {
     box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.1); }
   .about__header {
     padding-top: 3rem;
-    font-size: 5rem; }
+    font-size: 5rem;
+    padding-bottom: 2rem; }
   .about__body {
     padding: 3rem; }
   .about__paragraph {
@@ -230,10 +231,11 @@ button {
     color: #15c6b0; }
   .about__img {
     float: right;
-    width: 25rem;
-    height: 25rem;
+    width: calc(20vw + 75px);
+    height: auto;
+    max-width: 30rem;
     border-radius: 50%;
-    margin: 2rem;
+    margin: 0 0 1rem 1rem;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transition: 2s ease-in-out all; }
@@ -243,6 +245,11 @@ button {
   @media only screen and (max-width: 56.25em) {
     .about__container {
       max-width: 90vw; } }
+  @media only screen and (max-width: 37.5em) {
+    .about__paragraph {
+      font-size: 1.8rem; }
+      .about__paragraph:first-of-type {
+        font-size: 2.5rem; } }
 
 .works {
   height: auto;

@@ -17,6 +17,7 @@
     &__header {
         padding-top: $margin-top;
         font-size: $font-h1;
+        padding-bottom: 2rem;
     }
 
     &__body {
@@ -49,10 +50,11 @@
 
     &__img {
         float: right;
-        width: 25rem;
-        height: 25rem;
+        width: calc(20vw + 75px);
+        height: auto;
+        max-width: 30rem;
         border-radius: 50%;
-        margin: 2rem;
+        margin: 0 0 1rem 1rem;
 
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
@@ -60,7 +62,6 @@
 
         &:hover {
             transform: rotate(360deg);
-            // filter: invert(100%);
             filter: hue-rotate(360deg);
         }
     }
@@ -68,6 +69,16 @@
     @include responsive($tablet-portrait){
         &__container {
             max-width: 90vw;
+        }
+    }
+
+    @include responsive($phone){
+        &__paragraph {
+            &:first-of-type {
+                font-size: 2.5rem;
+            }
+
+            font-size: 1.8rem;
         }
     }
 
