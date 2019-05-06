@@ -1,0 +1,13 @@
+.resume {
+    background-color: $color-offwhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .5s ease all;
+    }    
+}
