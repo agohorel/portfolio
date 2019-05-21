@@ -14,4 +14,16 @@
     &__img {
         margin: 2rem 0 2rem 0;
     }
+
+    @include responsive($tablet-portrait){
+        &__img {
+            max-width: 75vw;
+        }        
+    }
+
+    @include responsive($phone){
+        &__img {
+            max-width: 90vw;
+        }        
+    }
 }

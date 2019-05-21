@@ -716,3 +716,9 @@ button {
     transition: .5s ease all; }
   .resume__img {
     margin: 2rem 0 2rem 0; }
+  @media only screen and (max-width: 768px) {
+    .resume__img {
+      max-width: 75vw; } }
+  @media only screen and (max-width: 600px) {
+    .resume__img {
+      max-width: 90vw; } }
