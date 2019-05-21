@@ -103,4 +103,18 @@
 	&__radio-input:checked ~ &__radio-label &__radio-button::after {
 		opacity: 1;
 	}
+
+	@include responsive($phone){
+		&__container {
+			width: 90vw;
+
+			& form {
+				width: inherit;
+			}
+
+			& input, textarea {
+				width: 90%;
+			}
+		}
+	}
 }

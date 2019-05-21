@@ -689,6 +689,14 @@ button {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
+@media only screen and (max-width: 600px) {
+  .form__container {
+    width: 90vw; }
+    .form__container form {
+      width: inherit; }
+    .form__container input, .form__container textarea {
+      width: 90%; } }
+
 .scroll-progress {
   position: fixed;
   top: 0;
