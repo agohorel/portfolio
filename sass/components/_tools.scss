@@ -1,27 +1,27 @@
 .tools {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    padding-left: 2rem;
     font-size: 1.2rem;
 
     &__box {
         display: inline-block;
         border-radius: $border-radius;
-        background-color: darken($color-offwhite, 10%);
+        background-color: darken($color-offwhite, 15%);
         padding: 1rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
         @include shadow(0, .2rem, .25rem, 0.1);
     }
 
 }
 
 table {
-	border-spacing: 2rem .25rem;
+	border-spacing: 2rem 0;
 }
 
 th {
 	text-align: left;
 }
 
-td {
+td:not(:last-of-type) {
 	padding-right: 3rem;
 }
